@@ -1,0 +1,15 @@
+C:\Users\Maciek\Desktop\PRACA2_\PRACA2_\bin\Debug\net6.0\PRACA2_.exe
+C:\Users\Maciek\Desktop\PRACA2_\PRACA2_\bin\Debug\net6.0\PRACA2_.deps.json
+C:\Users\Maciek\Desktop\PRACA2_\PRACA2_\bin\Debug\net6.0\PRACA2_.runtimeconfig.json
+C:\Users\Maciek\Desktop\PRACA2_\PRACA2_\bin\Debug\net6.0\PRACA2_.dll
+C:\Users\Maciek\Desktop\PRACA2_\PRACA2_\bin\Debug\net6.0\PRACA2_.pdb
+C:\Users\Maciek\Desktop\PRACA2_\PRACA2_\obj\Debug\net6.0\PRACA2_.csproj.AssemblyReference.cache
+C:\Users\Maciek\Desktop\PRACA2_\PRACA2_\obj\Debug\net6.0\PRACA2_.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Maciek\Desktop\PRACA2_\PRACA2_\obj\Debug\net6.0\PRACA2_.AssemblyInfoInputs.cache
+C:\Users\Maciek\Desktop\PRACA2_\PRACA2_\obj\Debug\net6.0\PRACA2_.AssemblyInfo.cs
+C:\Users\Maciek\Desktop\PRACA2_\PRACA2_\obj\Debug\net6.0\PRACA2_.csproj.CoreCompileInputs.cache
+C:\Users\Maciek\Desktop\PRACA2_\PRACA2_\obj\Debug\net6.0\PRACA2_.dll
+C:\Users\Maciek\Desktop\PRACA2_\PRACA2_\obj\Debug\net6.0\refint\PRACA2_.dll
+C:\Users\Maciek\Desktop\PRACA2_\PRACA2_\obj\Debug\net6.0\PRACA2_.pdb
+C:\Users\Maciek\Desktop\PRACA2_\PRACA2_\obj\Debug\net6.0\PRACA2_.genruntimeconfig.cache
+C:\Users\Maciek\Desktop\PRACA2_\PRACA2_\obj\Debug\net6.0\ref\PRACA2_.dll
