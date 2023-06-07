@@ -1,0 +1,45 @@
+Wyniki testu o kryptonimie: q
+Maszyny:
+Maszyna id=0
+Czas trwania kolejnych operacji: 4,891684710143487 0,5391015497082585
+Czas trwania dostosowania maszyny z jednej operacji na drugą:
+ 9,173096027810509 5,046240748117862
+ 6,375818160780908 3,1626835380707075
+
+Procesy:
+Proces o id= 0
+Priorytet: 9
+Maksymalny czas trwania: 1303
+Operacje wchodzące w skład procesu:
+
+Operacja o id=0
+Czas po którym musi się rozpocząć po zakończeniu poprzedniej: -1
+Czas po któym musi się rozpocząć kolejna operacja: -1
+Czy można pauzować?: True
+Maksymalny czas pauzy: 2,7451192979927717
+Maksymalna ilość pauz (-1 oznacza nieskończoność): 1
+Potrzebne materiały (ostatnia kolumna oznacza % postępu, w którym są potrzebne):
+ 0 100
+Produkowane materiały (ostatnia kolumna oznacza % postępu, w którym są produkowane):
+ 76 100
+
+Operacja o id=1
+Czas po którym musi się rozpocząć po zakończeniu poprzedniej: 4,565756630093545
+Czas po któym musi się rozpocząć kolejna operacja: 8,477772548066847
+Czy można pauzować?: False
+Potrzebne materiały (ostatnia kolumna oznacza % postępu, w którym są potrzebne):
+ 0 100
+Produkowane materiały (ostatnia kolumna oznacza % postępu, w którym są produkowane):
+ 76 100
+
+Liczba produktów na początku procesu produkcyjnego: 31
+
+Ustawienia algorytmów:
+Algorytm genetyczny
+Populacja początkowa: 100
+Maksymalna populacja: 1000
+Procent najlepszych osobników do reprodukcji: 100
+Procent mutowanych osobników: 20
+Populacja początkowa: 10
+
+Wagi: a:0,7,b:0,4,c:0,7,d:0,6,e:0,9,f:0,2,g:0,3,t:0,3
