@@ -45,4 +45,40 @@ namespace Opracowanie_heurystyk
 
 
     }
+
+    public class OperationCSV
+    {
+        public int Id { get; set; }
+        public double TimeBefore { get; set; }
+        public double TimeAfter { get; set; }
+        public bool CanPause { get; set; }
+        public double MaxPauseTime { get; set; }
+        public int PauseCount { get; set;}
+
+
+    }
+
+    public class ProductionCSV
+    {
+        public int Operation { get; set; }
+        public int Type { get; set; }
+        public double Qnty { get; set; }
+        public int Number { get; set; }
+        public int Row { get; set; }
+
+    }
+
+    public class ProcessCSV
+    {
+        public int Id { get; set; }
+        public int Priority { get; set; }
+        public double MaxTime { get; set; }
+
+    }
+
+    public class OPCSV
+    {
+        public int Id { get; set; }
+        public int Operation { get; set; }
+    }
 }

@@ -668,10 +668,87 @@ namespace Opracowanie_heurystyk
 
                 }
 
+                using (var reader = new StreamReader("C:\\Users\\Maciek\\Desktop\\PRACA2_\\CSV\\Operation.csv"))
+                using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+                {
+                    var records = csv.GetRecords<OperationCSV>().ToList();
+                    using (var reader1 = new StreamReader("C:\\Users\\Maciek\\Desktop\\PRACA2_\\CSV\\Production.csv"))
+                    using (var csv1 = new CsvReader(reader1, CultureInfo.InvariantCulture))
+                    {
+                        var records1 = csv1.GetRecords<ProductionCSV>().ToList();
+                        List<double> temp = new List<double>();
+                        for (int i = 0; i < o; i++)
+                        {
+                            List<List<double>> prod = new List<List<double>>();
+                            List<List<double>> sour = new List<List<double>>();
+                            
+                            for (int j = 0; j < records1.Count(); j++)
+                            {
+                                if (records1[j].Operation == i)
+                                {
+                                    
+                                    while (records1[j].Row > prod.Count-1 & records1[j].Type == 0 | records1[j].Row > sour.Count-1 & records1[j].Type == 1)
+                                    {
+                                        temp = new List<double>();
+                                        for (int l = 0; l <= products_quant.Count(); l++)
+                                        {
+                                            temp.Add(0);
+                                        }
+                                        if (records1[j].Type == 0)
+                                        {
+                                            prod.Add(temp);
+                                        }
+                                        else
+                                        {
+                                            sour.Add(temp);
+                                        }
+                                    }
+                                    if (records1[j].Type == 0)
+                                    {
+                                        prod[records1[j].Row][records1[j].Number] = records1[j].Qnty;
+                                    }
+                                    else
+                                    {
+                                        sour[records1[j].Row][records1[j].Number] = records1[j].Qnty;
+                                    }
+                                    
+                                }
+                                
+                                
+                            }
+                            all_operations.Add(new Operation(prod, i, records[i].TimeAfter, records[i].TimeBefore, sour, records[i].CanPause, records[i].MaxPauseTime, records[i].PauseCount));
+                        }
+
+                    }
+
+                }
 
 
+                using (var reader = new StreamReader("C:\\Users\\Maciek\\Desktop\\PRACA2_\\CSV\\Process.csv"))
+                using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+                {
+                    var records = csv.GetRecords<ProcessCSV>().ToList();
+                    using (var reader1 = new StreamReader("C:\\Users\\Maciek\\Desktop\\PRACA2_\\CSV\\OP.csv"))
+                    using (var csv1 = new CsvReader(reader1, CultureInfo.InvariantCulture))
+                    {
+                        var records1 = csv1.GetRecords<OPCSV>().ToList();
+                        for (int i = 0; i < p; i++)
+                        {
+                            List<Operation> opera = new List<Operation>();
+                            for (int j = 0; j < records1.Count(); j++)
+                            {
+                                if (records1[j].Id == i)
+                                {
+                                    opera.Add(all_operations[records1[j].Operation]);
+                                }
+                                
+                            }
+                            all_processes.Add(new Process(i, opera, records[i].MaxTime, records[i].Priority));
+                        }
+                    }
+                }
 
-                int alg_mode = 1;
+                    int alg_mode = 1;
                 double aa = 0.7;
                 double b = 0.4;
                 double c = 0.7;
