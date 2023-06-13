@@ -1,38 +1,38 @@
 Wyniki testu o kryptonimie: q
 Maszyny:
 Maszyna id=0
-Czas trwania kolejnych operacji: 4,891684710143487 0,5391015497082585
+Czas trwania kolejnych operacji: 2,7743371109322035 5,967335200486854
 Czas trwania dostosowania maszyny z jednej operacji na drugą:
- 9,173096027810509 5,046240748117862
- 6,375818160780908 3,1626835380707075
+ 8,420299442488918 2,9179388701528373
+ 2,6930342880704594 3,223415596754621
 
 Procesy:
 Proces o id= 0
-Priorytet: 9
-Maksymalny czas trwania: 1303
+Priorytet: 4
+Maksymalny czas trwania: 2503
 Operacje wchodzące w skład procesu:
 
 Operacja o id=0
-Czas po którym musi się rozpocząć po zakończeniu poprzedniej: -1
-Czas po któym musi się rozpocząć kolejna operacja: -1
-Czy można pauzować?: True
-Maksymalny czas pauzy: 2,7451192979927717
-Maksymalna ilość pauz (-1 oznacza nieskończoność): 1
-Potrzebne materiały (ostatnia kolumna oznacza % postępu, w którym są potrzebne):
- 0 100
-Produkowane materiały (ostatnia kolumna oznacza % postępu, w którym są produkowane):
- 76 100
-
-Operacja o id=1
-Czas po którym musi się rozpocząć po zakończeniu poprzedniej: 4,565756630093545
-Czas po któym musi się rozpocząć kolejna operacja: 8,477772548066847
+Czas po którym musi się rozpocząć po zakończeniu poprzedniej: 2,7394254518280095
+Czas po któym musi się rozpocząć kolejna operacja: 8,74144428943668
 Czy można pauzować?: False
 Potrzebne materiały (ostatnia kolumna oznacza % postępu, w którym są potrzebne):
  0 100
 Produkowane materiały (ostatnia kolumna oznacza % postępu, w którym są produkowane):
- 76 100
+ 97 100
 
-Liczba produktów na początku procesu produkcyjnego: 31
+Operacja o id=1
+Czas po którym musi się rozpocząć po zakończeniu poprzedniej: -1
+Czas po któym musi się rozpocząć kolejna operacja: -1
+Czy można pauzować?: True
+Maksymalny czas pauzy: 0,4767828433850374
+Maksymalna ilość pauz (-1 oznacza nieskończoność): -1
+Potrzebne materiały (ostatnia kolumna oznacza % postępu, w którym są potrzebne):
+ 0 100
+Produkowane materiały (ostatnia kolumna oznacza % postępu, w którym są produkowane):
+ 78 100
+
+Liczba produktów na początku procesu produkcyjnego: 19
 
 Ustawienia algorytmów:
 Algorytm genetyczny

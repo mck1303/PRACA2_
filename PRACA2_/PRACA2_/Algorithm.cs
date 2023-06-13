@@ -88,11 +88,6 @@ namespace Opracowanie_heurystyk
 
             }
 
-            if (all_op.Count != all_op_b.Count)
-            {
-                Console.WriteLine("YTONG");
-            }
-
             for (int i = 0; i < mm.Count; i++)
             {
                 newBorn.Add(new List<OP> { new OP(-1, -1, -1) });

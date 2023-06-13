@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CsvHelper;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics.Tracing;
@@ -13,209 +14,6 @@ using System.Xml.Schema;
 
 namespace Opracowanie_heurystyk
 {
-    public class SaveResults
-    {
-        public void save_res(string name, List<Machine> all_machines, List<Process> all_processes, double[] start_quant, int alg_mode, List<List<OP>> res, double a, double b, double c, double d, double e, double f, double g, double t, int start_pop, int max_iterations, int population, int best_percentage, int mut_percentage)
-        {
-            string paths = "C:\\Users\\Maciek\\Desktop\\PRACA2_\\WYNIKI\\";
-            using (StreamWriter writer = new StreamWriter(paths + name + ".txt"))
-            {
-                writer.WriteLine("Wyniki testu o kryptonimie: {0}", name);
-                writer.WriteLine("Maszyny:");
-                for (int i = 0; i < all_machines.Count; i++)
-                {
-                    writer.WriteLine("Maszyna id={0}", all_machines[i].id);
-                    writer.Write("Czas trwania kolejnych operacji:");
-                    for (int j = 0; j < all_machines[i].operation_time.Count(); j++)
-                    {
-                        if (j != all_machines[i].operation_time.Count() - 1)
-                        {
-                            writer.Write(" {0}", all_machines[i].operation_time[j]);
-                        }
-                        else
-                        {
-                            writer.WriteLine(" {0}", all_machines[i].operation_time[j]);
-                        }
-                    }
-                    writer.WriteLine("Czas trwania dostosowania maszyny z jednej operacji na drugą:");
-                    for (int j = 0; j < all_machines[i].change_matrix.GetUpperBound(0) + 1; j++)
-                    {
-                        for (int k = 0; k < all_machines[i].change_matrix.GetUpperBound(1) + 1; k++)
-                            if (k != all_machines[i].change_matrix.GetUpperBound(1))
-                            {
-                                writer.Write(" {0}", all_machines[i].change_matrix[j, k]);
-                            }
-                            else
-                            {
-                                writer.WriteLine(" {0}", all_machines[i].change_matrix[j, k]);
-                            }
-                    }
-
-                }
-                writer.WriteLine("");
-                writer.WriteLine("Procesy:");
-                for (int i = 0; i < all_processes.Count; i++)
-                {
-                    writer.WriteLine("Proces o id= {0}", all_processes[i].id);
-                    writer.WriteLine("Priorytet: {0}", all_processes[i].priority);
-                    writer.WriteLine("Maksymalny czas trwania: {0}", all_processes[i].max_time);
-                    writer.WriteLine("Operacje wchodzące w skład procesu:");
-                    for (int j = 0; j < all_processes[i].operations.Count; j++)
-                    {
-                        writer.WriteLine("");
-                        writer.WriteLine("Operacja o id={0}", all_processes[i].operations[j].id);
-                        writer.WriteLine("Czas po którym musi się rozpocząć po zakończeniu poprzedniej: {0}", all_processes[i].operations[j].time_after_previous);
-                        writer.WriteLine("Czas po któym musi się rozpocząć kolejna operacja: {0}", all_processes[i].operations[j].time_before_next);
-                        writer.WriteLine("Czy można pauzować?: {0}", all_processes[i].operations[j].canPause);
-                        if (all_processes[i].operations[j].canPause)
-                        {
-                            writer.WriteLine("Maksymalny czas pauzy: {0}", all_processes[i].operations[j].maxPauseTime);
-                            writer.WriteLine("Maksymalna ilość pauz (-1 oznacza nieskończoność): {0}", all_processes[i].operations[j].pauseCount);
-                        }
-                        writer.WriteLine("Potrzebne materiały (ostatnia kolumna oznacza % postępu, w którym są potrzebne):");
-                        for (int k = 0; k < all_processes[i].operations[j].needed_sources.Count; k++)
-                        {
-                            for (int l = 0; l < all_processes[i].operations[j].needed_sources[k].Count; l++)
-                            {
-                                if (l != all_processes[i].operations[j].needed_sources[k].Count - 1)
-                                {
-                                    writer.Write(" {0}", all_processes[i].operations[j].needed_sources[k][l]);
-                                }
-                                else
-                                {
-                                    writer.WriteLine(" {0}", all_processes[i].operations[j].needed_sources[k][l]);
-                                }
-                            }
-                        }
-                        writer.WriteLine("Produkowane materiały (ostatnia kolumna oznacza % postępu, w którym są produkowane):");
-                        for (int k = 0; k < all_processes[i].operations[j].produced_products.Count; k++)
-                        {
-                            for (int l = 0; l < all_processes[i].operations[j].produced_products[k].Count; l++)
-                            {
-                                if (l != all_processes[i].operations[j].produced_products[k].Count - 1)
-                                {
-                                    writer.Write(" {0}", all_processes[i].operations[j].produced_products[k][l]);
-                                }
-                                else
-                                {
-                                    writer.WriteLine(" {0}", all_processes[i].operations[j].produced_products[k][l]);
-                                }
-                            }
-                        }
-
-                    }
-                }
-                writer.WriteLine("");
-                writer.Write("Liczba produktów na początku procesu produkcyjnego:");
-                for (int i = 0; i < start_quant.Length; i++)
-                {
-                    if (i != start_quant.Length - 1)
-                    {
-                        writer.Write(" {0}", start_quant[i]);
-                    }
-                    else
-                    {
-                        writer.WriteLine(" {0}", start_quant[i]);
-                    }
-                }
-                writer.WriteLine("");
-                writer.WriteLine("Ustawienia algorytmów:");
-                if (alg_mode == 1)
-                {
-                    writer.WriteLine("Algorytm genetyczny");
-                }
-                else if (alg_mode == 2)
-                {
-                    writer.WriteLine("Algorytm genetyczny z początkowym algorytmem Johnsona");
-                }
-                else if (alg_mode == 3)
-                {
-                    writer.WriteLine("Algorytm genetyczny z algorytmem Johnsona");
-                }
-                writer.WriteLine("Populacja początkowa: {0}", start_pop);
-                writer.WriteLine("Maksymalna populacja: {0}", max_iterations);
-                writer.WriteLine("Procent najlepszych osobników do reprodukcji: {0}", population);
-                writer.WriteLine("Procent mutowanych osobników: {0}", best_percentage);
-                writer.WriteLine("Populacja początkowa: {0}", mut_percentage);
-                writer.WriteLine("");
-                writer.WriteLine("Wagi: a:{0},b:{1},c:{2},d:{3},e:{4},f:{5},g:{6},t:{7}", a, b, c, d, e, f, g, t);
-            }
-        }
-    }
-    public class Machine
-    {
-        public int id;
-        public double[,] change_matrix;
-        public double[] operation_time;
-        public Machine(int id, double[,] change_matrix, double[] operation_time)
-        {
-            this.id = id;
-            this.change_matrix = change_matrix;
-            this.operation_time = operation_time;
-        }
-
-    }
-
-    public class Operation
-    {
-        public int id;
-        public double time_after_previous;
-        public double time_before_next;
-        public List<List<double>> needed_sources; //row is time (last position as % of final time), column is source
-        public List<List<double>> produced_products; //row is time (last position as % of final time), column is product
-        public bool canPause;
-        public double maxPauseTime;
-        public int pauseCount; //-1 - infinity
-
-        public Operation(List<List<double>> produced_products, int id, double time_after_previous, double time_before_next, List<List<double>> needed_sources, bool canPause, double maxPauseTime, int pauseCount)
-        {
-            this.produced_products = produced_products;
-            this.id = id;
-            this.time_after_previous = time_after_previous;
-            this.time_before_next = time_before_next;
-            this.needed_sources = needed_sources;
-            this.canPause = canPause;
-            this.maxPauseTime = maxPauseTime;
-            this.pauseCount = pauseCount;
-        }
-
-    }
-    public class Process
-    {
-        public int id;
-        public List<Operation> operations;
-        public int priority;
-        public double max_time;
-        public Process(int id, List<Operation> operations, double max_time, int priority)
-        {
-            this.id = id;
-            this.operations = operations;
-            this.max_time = max_time;
-            this.priority = priority;
-        }
-    }
-
-
-
-
-
-
-
-    public struct OP
-    {
-        public OP(int p, int o, double time = 0)
-        {
-            this.P = p;
-            this.O = o;  //o==-1 oznacza przerwę o zadanym czasie -2 oznacza przerwę na kalibrajcę maszyny w sumie to jedno
-            this.Time = time; //dawać czas żeby było wiadome kiedy przerwy
-        }
-        public int O { get; }
-        public int P { get; }
-
-        public double Time { get; }
-
-    }
-
     public class CostFunction
     {
 
@@ -575,7 +373,7 @@ namespace Opracowanie_heurystyk
             List<Operation> all_operations = new List<Operation>();
             List<Process> all_processes = new List<Process>();
             List<Machine> all_machines = new List<Machine>();
-            int mode_of_creation = 2;//0-give info, 1-give list (TODO), 2-random
+            int mode_of_creation = 1;//0-give info, 1-give CSV, 2-random
 
             if (mode_of_creation == 0)
             {
@@ -806,6 +604,92 @@ namespace Opracowanie_heurystyk
                 }
                 Algorithm Al = new Algorithm(1);
                 Al.Run_Algorithm(products_quant, all_operations, all_machines, all_processes, 1, 100, 0.7, 0.4, 0.7, 0.6, 0.9, 0.2, 0.3, 0.3);
+
+            }
+
+            if (mode_of_creation == 1)
+            {
+                double[] products_quant;
+                int m;
+                int p;
+                int o;
+                using (var reader = new StreamReader("C:\\Users\\Maciek\\Desktop\\PRACA2_\\CSV\\Basics.csv"))
+                using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+                {
+                    var records = csv.GetRecords<BasicCSV>().ToList();
+                    m = records[0].Machines;
+                    p = records[0].Processes;
+                    o = records[0].Operations;
+                }
+
+                using (var reader = new StreamReader("C:\\Users\\Maciek\\Desktop\\PRACA2_\\CSV\\Products_at_start.csv"))
+                using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+                {
+                    var records = csv.GetRecords<ProdStartCSV>().ToList();
+                    products_quant = new double[records.Count];
+                    for (int i = 0; i < records.Count(); i++)
+                    {
+                        products_quant[records[i].Id] = records[i].Qnty;
+                               
+                    }
+                }
+                using (var reader = new StreamReader("C:\\Users\\Maciek\\Desktop\\PRACA2_\\CSV\\MachinesTimes.csv"))
+                using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+                {
+                    var records1 = csv.GetRecords<MachineTimeCSV>().ToList();
+                    using (var reader2 = new StreamReader("C:\\Users\\Maciek\\Desktop\\PRACA2_\\CSV\\MachinesChange.csv"))
+                    using (var csv2 = new CsvReader(reader2, CultureInfo.InvariantCulture))
+                    {
+                        var records2 = csv2.GetRecords<MachineChangeCSV>().ToList();
+                        for (int i = 0; i < m; i++)
+                        {
+                            double[] times = new double[o];
+                            double[,] change = new double[o, o];
+                            for (int j = 0; j < records1.Count(); j++)
+                            {
+                                if (records1[j].Machine == i)
+                                {
+                                    times[records1[j].Operation] = records1[j].Time;
+                                }
+                            }
+                            for (int j = 0; j < records2.Count(); j++)
+                            {
+                                if (records2[j].Machine == i)
+                                {
+                                    change[records2[j].Operation1, records2[j].Operation2] = records2[j].Time;
+                                }
+                            }
+                            all_machines.Add(new Machine (i,change,times));
+
+                        }
+                        
+
+                    }
+
+                }
+
+
+
+
+                int alg_mode = 1;
+                double aa = 0.7;
+                double b = 0.4;
+                double c = 0.7;
+                double d = 0.6;
+                double e = 0.9;
+                double f = 0.2;
+                double g = 0.3;
+                double t = 0.3;
+                int max_iterations = 1000;
+                int population = 100;
+                int best_percentage = 20;
+                int mut_percentage = 10;
+                double time_of_pause = 10.0;
+                int start_pop = 100;
+                Algorithm Al = new Algorithm(1);
+                List<List<OP>> res = Al.Run_Algorithm(products_quant, all_operations, all_machines, all_processes, alg_mode, start_pop, aa, b, c, d, e, f, g, t, max_iterations, population, best_percentage, mut_percentage, time_of_pause);
+                SaveResults save = new SaveResults();
+                save.save_res(name, all_machines, all_processes, products_quant, alg_mode, res, aa, b, c, d, e, f, g, t, start_pop, max_iterations, population, best_percentage, mut_percentage);
 
             }
             if (mode_of_creation == 2)
