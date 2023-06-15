@@ -228,6 +228,10 @@ namespace Opracowanie_heurystyk
             sum += priority_fail * e;
             sum += too_big_window * f;
             sum += quant_of_lost_sources * g;
+            if (sum == 0)
+            {
+                Console.WriteLine("Something is no yes");
+            }
             return sum;
 
         }
@@ -748,7 +752,7 @@ namespace Opracowanie_heurystyk
                     }
                 }
 
-                    int alg_mode = 1;
+                int alg_mode = 3;
                 double aa = 0.7;
                 double b = 0.4;
                 double c = 0.7;
