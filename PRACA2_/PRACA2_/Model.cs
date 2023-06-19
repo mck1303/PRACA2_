@@ -10,6 +10,7 @@ using System.Net.Mail;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using System.Xml.Schema;
 
 namespace Opracowanie_heurystyk
@@ -59,7 +60,7 @@ namespace Opracowanie_heurystyk
 
         }
 
-        public double CountCost(List<List<double>> s_times, List<Process> pp, List<Operation> oo, List<List<double>> production, List<List<double>> needs)
+        public double CountCost(List<List<double>> s_times, List<Process> pp, List<Operation> oo, List<List<double>> production, List<List<double>> needs, int mode = 0, string name="Y")
         {
             int process_break = 0;
             double time_window_wrong = 0;
@@ -194,7 +195,7 @@ namespace Opracowanie_heurystyk
             List<List<double>> summary = new List<List<double>>();
             for (int i = 0; i < needs.Count; i++)
             {
-                summary.Add(new List<double> { needs[i][0], needs[i][1], -needs[i][0] });
+                summary.Add(new List<double> { needs[i][0], needs[i][1], -needs[i][2] });
             }
             for (int i = 0; i < production.Count; i++)
             {
@@ -231,6 +232,22 @@ namespace Opracowanie_heurystyk
             if (sum == 0)
             {
                 Console.WriteLine("Something is no yes");
+            }
+            if (mode != 0)
+            {
+                string paths = "C:\\Users\\Maciek\\Desktop\\PRACA2_\\WYNIKI\\";
+                using (StreamWriter writer = new StreamWriter(paths + name + "_b_res.txt"))
+                {
+                    writer.WriteLine("Wyniki rozwiązania testu o kryptonimie: {0}", name);
+                    writer.WriteLine("Ilość zaburzeń procesów: {0}", process_break);
+                    writer.WriteLine("Ilość złych okien czasowych: {0}", time_window_wrong); //TODO do usuniecia
+                    writer.WriteLine("Ilość przypadków zbyt wielu pauz: {0}", too_many_pauses);
+                    writer.WriteLine("Czas przekaczający maksymalny czas pauz: {0}", pauseTime);
+                    writer.WriteLine("Całkowity czas produkcji: {0}", all_prod_time);
+                    writer.WriteLine("Ilość niedotrzymanych priorytetów: {0}", priority_fail);
+                    writer.WriteLine("Czas wykraczający poza maksymalną długość okna czasowego: {0}", too_big_window);
+                    writer.WriteLine("Ilość nieotrzymanych materiałów: {0}", quant_of_lost_sources);
+                }
             }
             return sum;
 
@@ -378,7 +395,7 @@ namespace Opracowanie_heurystyk
             List<Operation> all_operations = new List<Operation>();
             List<Process> all_processes = new List<Process>();
             List<Machine> all_machines = new List<Machine>();
-            int mode_of_creation = 1;//0-give info, 1-give CSV, 2-random
+            int mode_of_creation = 2;//0-give info, 1-give CSV, 2-random
 
             if (mode_of_creation == 0)
             {

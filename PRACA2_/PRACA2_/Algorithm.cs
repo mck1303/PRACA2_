@@ -487,6 +487,16 @@ namespace Opracowanie_heurystyk
                         if (best_value == -1)
                         {
                             best_value = family_1_values[j];
+                            best_result = new List<List<OP>>();
+                            for (int k = 0; k < family_1[j].Count; k++)
+                            {
+                                List<OP> p = new List<OP>();
+                                for (int l = 0; l < family_1[j][k].Count; l++)
+                                {
+                                    p.Add(family_1[j][k][l]);
+                                }
+                                best_result.Add(p);
+                            }
                         }
                         if (family_1_values[j] < best_value)
                         {
@@ -673,6 +683,8 @@ namespace Opracowanie_heurystyk
             {
                 csv.WriteRecords(values);
             }
+            List<List<List<double>>> cn = sim.CountTime(best_result);
+            cost.CountCost(cn[0], pp, oo, cn[1], cn[2],1,name);
 
             return best_result;
             
