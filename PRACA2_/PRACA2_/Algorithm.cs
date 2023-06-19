@@ -1,6 +1,8 @@
-﻿using System;
+﻿using CsvHelper;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Globalization;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -8,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace Opracowanie_heurystyk
 {
+
     public class OPList
     {
         List<List<int>> operations_in_machines = new List<List<int>>();
@@ -201,6 +204,7 @@ namespace Opracowanie_heurystyk
     
     public class Algorithm //johnson po ustaleniu kolejności ale przed mutacjami, dawać do czasu czas przestrojenia i wykonania
     {
+        string paths = "C:\\Users\\Maciek\\Desktop\\PRACA2_\\WYNIKI\\Na wykresy\\";
         public int mode; //0 - tylko genetyczny, 1 - genetyczny z początkowym johnsona, 2 - genetyczny z johnsona w każdej generacji
         public Algorithm(int mode)
         {
@@ -371,6 +375,10 @@ namespace Opracowanie_heurystyk
             else
             {
                 List<List<OP>> s = new List<List<OP>>();
+                for (int i = 0; i <mm.Count; i++)
+                {
+                    s.Add(new List<OP> { new OP(-1, -1, -1) });
+                }
                 double t=0;
                 for (int i = 0; i < pp[0].operations.Count; i++)
                 {
@@ -427,6 +435,10 @@ namespace Opracowanie_heurystyk
                     }
                     
                 }
+                for (int i = 0; i < s.Count; i++)
+                {
+                    s[i].Remove(s[i][0]);
+                }
                 return s;
 
             }
@@ -438,7 +450,7 @@ namespace Opracowanie_heurystyk
 
         
 
-        public List<List<OP>> Run_Algorithm(double[] start_quant, List<Operation> oo, List<Machine> mm, List<Process> pp, int algorithm_mode,  int starting_quant, double a, double b, double c, double d, double e, double f, double g, double t,  int max_iterations = 1000, int population=100, int best_percentage=20, int mut_percentage=10, double time_of_pause=10.0)//algorithm mode: 1-only genetic, 2-johnson on start, 3- full johnson and genetic
+        public List<List<OP>> Run_Algorithm(double[] start_quant, List<Operation> oo, List<Machine> mm, List<Process> pp, int algorithm_mode,  int starting_quant, double a, double b, double c, double d, double e, double f, double g, double t,  int max_iterations = 1000, int population=100, int best_percentage=20, int mut_percentage=10, double time_of_pause=10.0, string name="NoName")//algorithm mode: 1-only genetic, 2-johnson on start, 3- full johnson and genetic
         {
             int global_OP_id = 0;
             List<List<OP>> best_result = new List<List<OP>>();
@@ -449,7 +461,8 @@ namespace Opracowanie_heurystyk
             List<double> f_val = new List<double>();
             Simulation sim = new Simulation(pp, oo, mm);//, start_quant);
             CostFunction cost = new CostFunction(a, b, c, d, t, e, f, g, start_quant);
-            
+            double[] b_values= new double[max_iterations];
+
             OPList OPL = new OPList();
             Random rnd = new Random();
             if (algorithm_mode == 1)
@@ -478,11 +491,21 @@ namespace Opracowanie_heurystyk
                         if (family_1_values[j] < best_value)
                         {
                             best_value = family_1_values[j];
-                            best_result = family_1[j];
+                            best_result = new List<List<OP>>();
+                            for (int k = 0; k < family_1[j].Count; k++)
+                            {
+                                List<OP> p = new List<OP>();
+                                for (int l = 0; l < family_1[j][k].Count; l++)
+                                {
+                                    p.Add(family_1[j][k][l]);
+                                }
+                                best_result.Add(p);
+                            }
                         }
                     }
-                    //f_val.Sort();
-                    f_val.Reverse();
+                    b_values[i] = best_value;
+                    f_val.Sort();
+                    //f_val.Reverse();
                     for (int j = 0; j < best_objects; j++)
                     {
                         int x = family_1_values.IndexOf(f_val[j]);
@@ -531,11 +554,21 @@ namespace Opracowanie_heurystyk
                         if (family_1_values[j] < best_value)
                         {
                             best_value = family_1_values[j];
-                            best_result = family_1[j];
+                            best_result = new List<List<OP>>();
+                            for (int k = 0; k < family_1[j].Count; k++)
+                            {
+                                List<OP> p = new List<OP>();
+                                for (int l = 0; l < family_1[j][k].Count; l++)
+                                {
+                                    p.Add(family_1[j][k][l]);
+                                }
+                                best_result.Add(p);
+                            }
                         }
                     }
+                    b_values[i] = best_value;
                     f_val.Sort();
-                    f_val.Reverse();
+                    //f_val.Reverse();
                     for (int j = 0; j < best_objects; j++)
                     {
                         int x = family_1_values.IndexOf(f_val[j]);
@@ -602,7 +635,8 @@ namespace Opracowanie_heurystyk
                         }
                     }
                     f_val.Sort();
-                    f_val.Reverse();
+                    //f_val.Reverse();
+                    b_values[i] = best_value;
                     for (int j = 0; j < best_objects; j++)
                     {
                         int x = family_1_values.IndexOf(f_val[j]);
@@ -628,6 +662,18 @@ namespace Opracowanie_heurystyk
             {
                 Console.WriteLine("Wrong mode of algorithm");
             }
+            List<b_resCSV> values= new List<b_resCSV>();
+            for (int i = 0; i < b_values.Count(); i++)
+            {
+                values.Add(new b_resCSV { Iter = i, Best_Result = b_values[i]});
+            }
+
+            using (var writer = new StreamWriter(paths+name))
+            using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
+            {
+                csv.WriteRecords(values);
+            }
+
             return best_result;
             
         }

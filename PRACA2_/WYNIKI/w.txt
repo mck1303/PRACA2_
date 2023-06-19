@@ -92,11 +92,11 @@ Produkowane materiały (ostatnia kolumna oznacza % postępu, w którym są produ
 Liczba produktów na początku procesu produkcyjnego: 10 254 1,4 2 36 7 15
 
 Ustawienia algorytmów:
-Algorytm genetyczny z początkowym algorytmem Johnsona
+Algorytm genetyczny
 Populacja początkowa: 100
 Maksymalna populacja: 1000
 Procent najlepszych osobników do reprodukcji: 100
-Procent mutowanych osobników: 20
-Populacja początkowa: 10
+Procent mutowanych osobników: 2
+Populacja początkowa: 1
 
 Wagi: a:0,7,b:0,4,c:0,7,d:0,6,e:0,9,f:0,2,g:0,3,t:0,3

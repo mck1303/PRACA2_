@@ -263,7 +263,8 @@ namespace Opracowanie_heurystyk
             //Console.WriteLine(solution.Count);
             List<List<double>> needs = new List<List<double>>(); //lista: czas, surowce, ilość
             List<List<double>> production = new List<List<double>>(); //lista: czas, towar, ilość
-            operations_time = new List<List<double>>();
+            this.operations_time = new List<List<double>>();
+            this.machines_time = new List<double>(new double[mm.Count]);
             for (int i = 0; i < solution.Count; i++)
             {
                 for (int j = 0; j < solution[i].Count; j++)
@@ -606,8 +607,25 @@ namespace Opracowanie_heurystyk
                     }
                     all_machines.Add(new Machine(i, change, times));
                 }
+                int alg_mode = 3;
+                double aa = 0.7;
+                double bb = 0.4;
+                double c = 0.7;
+                double d = 0.6;
+                double e = 0.9;
+                double f = 0.2;
+                double g = 0.3;
+                double tt = 0.3;
+                int max_iterations = 1000;
+                int population = 100;
+                int best_percentage = 20;
+                int mut_percentage = 10;
+                double time_of_pause = 10.0;
+                int start_pop = 100;
                 Algorithm Al = new Algorithm(1);
-                Al.Run_Algorithm(products_quant, all_operations, all_machines, all_processes, 1, 100, 0.7, 0.4, 0.7, 0.6, 0.9, 0.2, 0.3, 0.3);
+                List<List<OP>> res = Al.Run_Algorithm(products_quant, all_operations, all_machines, all_processes, alg_mode, start_pop, aa, bb, c, d, e, f, g, tt, max_iterations, population, best_percentage, mut_percentage, time_of_pause, name);
+                SaveResults save = new SaveResults();
+                save.save_res(name, all_machines, all_processes, products_quant, alg_mode, res, aa, bb, c, d, e, f, g, tt, start_pop, max_iterations, population, best_percentage, mut_percentage);
 
             }
 
@@ -752,7 +770,7 @@ namespace Opracowanie_heurystyk
                     }
                 }
 
-                int alg_mode = 3;
+                int alg_mode = 1;
                 double aa = 0.7;
                 double b = 0.4;
                 double c = 0.7;
@@ -763,12 +781,12 @@ namespace Opracowanie_heurystyk
                 double t = 0.3;
                 int max_iterations = 1000;
                 int population = 100;
-                int best_percentage = 20;
-                int mut_percentage = 10;
+                int best_percentage = 2;
+                int mut_percentage = 1;
                 double time_of_pause = 10.0;
                 int start_pop = 100;
                 Algorithm Al = new Algorithm(1);
-                List<List<OP>> res = Al.Run_Algorithm(products_quant, all_operations, all_machines, all_processes, alg_mode, start_pop, aa, b, c, d, e, f, g, t, max_iterations, population, best_percentage, mut_percentage, time_of_pause);
+                List<List<OP>> res = Al.Run_Algorithm(products_quant, all_operations, all_machines, all_processes, alg_mode, start_pop, aa, b, c, d, e, f, g, t, max_iterations, population, best_percentage, mut_percentage, time_of_pause, name);
                 SaveResults save = new SaveResults();
                 save.save_res(name, all_machines, all_processes, products_quant, alg_mode, res, aa, b, c, d, e, f, g, t, start_pop, max_iterations, population, best_percentage, mut_percentage);
 
@@ -777,7 +795,7 @@ namespace Opracowanie_heurystyk
             {
 
                 Random rnd = new Random();
-                int p = rnd.Next(1, 4);
+                int p = rnd.Next(1, 7);
                 int o = rnd.Next(p * 2, p * 3);
                 int m = rnd.Next(1, o / 2);
                 int mean_time = 10;
@@ -951,15 +969,15 @@ namespace Opracowanie_heurystyk
                 double e = 0.9;
                 double f = 0.2;
                 double g = 0.3;
-                double t = 0.3;
+                double t = 1;
                 int max_iterations = 1000;
                 int population = 100;
-                int best_percentage = 20;
-                int mut_percentage = 10;
+                int best_percentage = 10;
+                int mut_percentage = 1;
                 double time_of_pause = 10.0;
                 int start_pop = 100;
                 Algorithm Al = new Algorithm(1);
-                List<List<OP>> res = Al.Run_Algorithm(products_quant, all_operations, all_machines, all_processes, alg_mode, start_pop, aa, b, c, d, e, f, g, t, max_iterations, population, best_percentage, mut_percentage, time_of_pause);
+                List<List<OP>> res = Al.Run_Algorithm(products_quant, all_operations, all_machines, all_processes, alg_mode, start_pop, aa, b, c, d, e, f, g, t, max_iterations, population, best_percentage, mut_percentage, time_of_pause, name);
                 SaveResults save = new SaveResults();
                 save.save_res(name, all_machines, all_processes, products_quant, alg_mode, res, aa, b, c, d, e, f, g, t, start_pop, max_iterations, population, best_percentage, mut_percentage);
             }

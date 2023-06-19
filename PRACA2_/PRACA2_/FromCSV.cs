@@ -81,4 +81,11 @@ namespace Opracowanie_heurystyk
         public int Id { get; set; }
         public int Operation { get; set; }
     }
+
+    public class b_resCSV
+    {
+        public int Iter { get; set; }
+
+        public double Best_Result { get; set; }
+    }
 }
