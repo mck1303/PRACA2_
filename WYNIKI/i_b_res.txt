@@ -1,0 +1,37 @@
+Wyniki rozwiązania testu o kryptonimie: i
+Ilość zaburzeń procesów: 2
+Ilość przypadków zbyt wielu pauz: 0
+Czas przekaczający maksymalny czas pauz: 0
+Całkowity czas produkcji: 123,23238855188386
+Różnica czasu ukończenia procesów z wyzszym priorytetem i niższym (nieuwzględnienie priorytetów): 0
+Czas wykraczający poza maksymalną długość okna czasowego: 21,982874177185
+Ilość nieotrzymanych materiałów: 11
+
+Struktura najlepszej kombinacji:
+Proces 0
+START O:0 M:0, Czas:0,
+STOP O:0 M:0, Czas:6,767725295564896,
+START O:1 M:1, Czas:6,767725295564896,
+STOP O:1 M:1, Czas:14,311024175962704,
+START O:2 M:0, Czas:18,842804581657937,
+STOP O:2 M:0, Czas:20,704629714570295,
+START O:3 M:1, Czas:34,3622682392277,
+STOP O:3 M:1, Czas:42,26613543967048,
+Proces 1
+START O:4 M:0, Czas:71,26146182187667,
+STOP O:4 M:0, Czas:71,48371436752038,
+START O:6 M:0, Czas:90,78260761779897,
+STOP O:6 M:0, Czas:96,38230616888363,
+START O:5 M:1, Czas:102,54259402190793,
+STOP O:5 M:1, Czas:106,88671123535178,
+START O:7 M:1, Czas:116,9059024757805,
+STOP O:7 M:1, Czas:123,23238855188386,
+Proces 2
+START O:7 M:1, Czas:47,46794373816469,
+STOP O:7 M:1, Czas:53,79442981426806,
+START O:1 M:1, Czas:66,50230555904346,
+START O:4 M:0, Czas:70,52253932629588,
+STOP O:4 M:0, Czas:70,7447918719396,
+STOP O:1 M:1, Czas:74,04560443944128,
+START O:3 M:1, Czas:94,51776633607389,
+STOP O:3 M:1, Czas:102,42163353651667,

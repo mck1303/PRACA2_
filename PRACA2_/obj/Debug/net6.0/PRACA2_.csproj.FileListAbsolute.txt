@@ -13,3 +13,5 @@ C:\Users\Maciek\Desktop\PRACA2_\PRACA2_\obj\Debug\net6.0\refint\PRACA2_.dll
 C:\Users\Maciek\Desktop\PRACA2_\PRACA2_\obj\Debug\net6.0\PRACA2_.pdb
 C:\Users\Maciek\Desktop\PRACA2_\PRACA2_\obj\Debug\net6.0\PRACA2_.genruntimeconfig.cache
 C:\Users\Maciek\Desktop\PRACA2_\PRACA2_\obj\Debug\net6.0\ref\PRACA2_.dll
+C:\Users\Maciek\Desktop\PRACA2_\PRACA2_\bin\Debug\net6.0\CsvHelper.dll
+C:\Users\Maciek\Desktop\PRACA2_\PRACA2_\obj\Debug\net6.0\PRACA2_.csproj.CopyComplete

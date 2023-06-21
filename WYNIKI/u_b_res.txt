@@ -1,0 +1,31 @@
+Wyniki rozwiązania testu o kryptonimie: u
+Ilość zaburzeń procesów: 1
+Ilość przypadków zbyt wielu pauz: 0
+Czas przekaczający maksymalny czas pauz: 0
+Całkowity czas produkcji: 67,93881501504053
+Różnica czasu ukończenia procesów z wyzszym priorytetem i niższym (nieuwzględnienie priorytetów): 0
+Czas wykraczający poza maksymalną długość okna czasowego: 4,598166394965837
+Ilość nieotrzymanych materiałów: 7
+
+Struktura najlepszej kombinacji:
+Proces 0
+START O:0 M:0, Czas:0,
+STOP O:0 M:0, Czas:6,295554030534403,
+START O:1 M:1, Czas:6,295554030534403,
+STOP O:1 M:1, Czas:9,061881215452507,
+START O:2 M:0, Czas:10,133869198960406,
+STOP O:2 M:0, Czas:15,892098648317843,
+Proces 1
+START O:4 M:0, Czas:9,932107926361704,
+START O:3 M:1, Czas:15,282693717056052,
+STOP O:4 M:0, Czas:16,212698314081532,
+STOP O:3 M:1, Czas:20,006437992641985,
+START O:5 M:1, Czas:51,4492110728873,
+STOP O:5 M:1, Czas:51,8705706223576,
+Proces 2
+START O:4 M:0, Czas:17,394070289536817,
+STOP O:4 M:0, Czas:23,674660677256647,
+START O:5 M:1, Czas:57,623735040069995,
+STOP O:5 M:1, Czas:58,04509458954029,
+START O:0 M:0, Czas:61,64326098450613,
+STOP O:0 M:0, Czas:67,93881501504053,
