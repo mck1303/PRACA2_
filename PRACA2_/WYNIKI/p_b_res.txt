@@ -1,0 +1,31 @@
+Wyniki rozwiązania testu o kryptonimie: p
+Ilość zaburzeń procesów: 0
+Ilość przypadków zbyt wielu pauz: 0
+Czas przekaczający maksymalny czas pauz: 0
+Całkowity czas produkcji: 50,18430190904558
+Różnica czasu ukończenia procesów z wyzszym priorytetem i niższym (nieuwzględnienie priorytetów): 27,868864612749352
+Czas wykraczający poza maksymalną długość okna czasowego: 1
+Ilość nieotrzymanych materiałów: 3
+
+Struktura najlepszej kombinacji:
+Proces 0
+START O:0 M:0, Czas:16,59304239767374,
+STOP O:0 M:0, Czas:24,854775769610207,
+START O:1 M:1, Czas:24,85477576961021,
+START O:2 M:0, Czas:32,245484811098464,
+STOP O:1 M:1, Czas:32,24548481109847,
+STOP O:2 M:0, Czas:42,14993698819159,
+Proces 1
+START O:3 M:1, Czas:37,97206888467689,
+STOP O:3 M:1, Czas:39,83557374452854,
+START O:4 M:0, Czas:44,478379812832564,
+STOP O:4 M:0, Czas:46,35403123703704,
+START O:5 M:1, Czas:46,35403123703705,
+STOP O:5 M:1, Czas:50,18430190904558,
+Proces 2
+START O:6 M:0, Czas:0,
+STOP O:6 M:0, Czas:1,7414045810346857,
+START O:0 M:0, Czas:1,8445604712842878,
+STOP O:0 M:0, Czas:10,106293843220755,
+START O:4 M:0, Czas:12,405420951237762,
+STOP O:4 M:0, Czas:14,281072375442239,

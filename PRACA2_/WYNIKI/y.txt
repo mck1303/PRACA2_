@@ -1,0 +1,180 @@
+Wyniki testu o kryptonimie: y
+Maszyny:
+Maszyna id=0
+Czas trwania kolejnych operacji: 3,7523735596908168 0 0 1,614168818473899 0 0 9,373935511471773 0
+Czas trwania dostosowania maszyny z jednej operacji na drugą:
+ 8,27953646138896 0 0 6,083020056894739 0 0 4,433993116264345 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 2,4638480281200126 0 0 4,523912457520404 0 0 3,813056252701003 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 2,9689523863858334 0 0 4,829295937620311 0 0 0,06822948289272102 0
+ 0 0 0 0 0 0 0 0
+Maszyna id=1
+Czas trwania kolejnych operacji: 0 1,4337259232536548 0 0 7,872914929862897 0 0 2,8503508362947927
+Czas trwania dostosowania maszyny z jednej operacji na drugą:
+ 0 0 0 0 0 0 0 0
+ 0 1,0823712898451154 0 0 9,55837846471358 0 0 1,029331591201842
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 3,4652697472716065 0 0 8,437427169142115 0 0 2,3368345540635396
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 9,46721625395372 0 0 2,9246335272100774 0 0 7,3671254392301275
+Maszyna id=2
+Czas trwania kolejnych operacji: 0 0 0,7702062541343269 0 0 8,153594294941337 0 0
+Czas trwania dostosowania maszyny z jednej operacji na drugą:
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 3,112758923542488 0 0 4,858658129354703 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 9,997370926362981 0 0 0,8202860135683399 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+
+Procesy:
+Proces o id= 0
+Priorytet: 8
+Maksymalny czas trwania: 2131
+Operacje wchodzące w skład procesu:
+
+Operacja o id=0
+Czas po którym musi się rozpocząć po zakończeniu poprzedniej: -1
+Czas po któym musi się rozpocząć kolejna operacja: -1
+Czy można pauzować?: False
+Potrzebne materiały (ostatnia kolumna oznacza % postępu, w którym są potrzebne):
+ 0 0 0 0 9 0 100
+Produkowane materiały (ostatnia kolumna oznacza % postępu, w którym są produkowane):
+ 29 0 0 0 0 0 100
+
+Operacja o id=1
+Czas po którym musi się rozpocząć po zakończeniu poprzedniej: -1
+Czas po któym musi się rozpocząć kolejna operacja: -1
+Czy można pauzować?: True
+Maksymalny czas pauzy: 9,740408599474495
+Maksymalna ilość pauz (-1 oznacza nieskończoność): 0
+Potrzebne materiały (ostatnia kolumna oznacza % postępu, w którym są potrzebne):
+ 0 0 0 80 0 0 100
+Produkowane materiały (ostatnia kolumna oznacza % postępu, w którym są produkowane):
+ 0 0 0 0 81 0 100
+
+Operacja o id=2
+Czas po którym musi się rozpocząć po zakończeniu poprzedniej: -1
+Czas po któym musi się rozpocząć kolejna operacja: -1
+Czy można pauzować?: False
+Potrzebne materiały (ostatnia kolumna oznacza % postępu, w którym są potrzebne):
+ 0 0 0 0 0 78 100
+Produkowane materiały (ostatnia kolumna oznacza % postępu, w którym są produkowane):
+ 40 0 0 0 0 0 100
+
+Operacja o id=3
+Czas po którym musi się rozpocząć po zakończeniu poprzedniej: 5,303362442308428
+Czas po któym musi się rozpocząć kolejna operacja: 8,512918421315034
+Czy można pauzować?: True
+Maksymalny czas pauzy: 9,99246910689062
+Maksymalna ilość pauz (-1 oznacza nieskończoność): 2
+Potrzebne materiały (ostatnia kolumna oznacza % postępu, w którym są potrzebne):
+ 0 0 0 13 0 0 100
+Produkowane materiały (ostatnia kolumna oznacza % postępu, w którym są produkowane):
+ 0 0 0 0 25 0 100
+Proces o id= 1
+Priorytet: 8
+Maksymalny czas trwania: 2208
+Operacje wchodzące w skład procesu:
+
+Operacja o id=4
+Czas po którym musi się rozpocząć po zakończeniu poprzedniej: -1
+Czas po któym musi się rozpocząć kolejna operacja: -1
+Czy można pauzować?: True
+Maksymalny czas pauzy: 0,4219264658579669
+Maksymalna ilość pauz (-1 oznacza nieskończoność): 2
+Potrzebne materiały (ostatnia kolumna oznacza % postępu, w którym są potrzebne):
+ 0 48 0 0 0 0 100
+Produkowane materiały (ostatnia kolumna oznacza % postępu, w którym są produkowane):
+ 32 0 0 0 0 0 100
+
+Operacja o id=5
+Czas po którym musi się rozpocząć po zakończeniu poprzedniej: 8,818664122770535
+Czas po któym musi się rozpocząć kolejna operacja: 5,318203383808341
+Czy można pauzować?: True
+Maksymalny czas pauzy: 4,057372727544725
+Maksymalna ilość pauz (-1 oznacza nieskończoność): 0
+Potrzebne materiały (ostatnia kolumna oznacza % postępu, w którym są potrzebne):
+ 36 0 0 0 0 0 100
+Produkowane materiały (ostatnia kolumna oznacza % postępu, w którym są produkowane):
+ 0 0 89 0 0 0 100
+
+Operacja o id=6
+Czas po którym musi się rozpocząć po zakończeniu poprzedniej: 3,312533576622898
+Czas po któym musi się rozpocząć kolejna operacja: 6,3585856879633535
+Czy można pauzować?: True
+Maksymalny czas pauzy: 4,784469835545778
+Maksymalna ilość pauz (-1 oznacza nieskończoność): 3
+Potrzebne materiały (ostatnia kolumna oznacza % postępu, w którym są potrzebne):
+ 0 67 0 0 0 0 100
+Produkowane materiały (ostatnia kolumna oznacza % postępu, w którym są produkowane):
+ 92 0 0 0 0 0 100
+
+Operacja o id=7
+Czas po którym musi się rozpocząć po zakończeniu poprzedniej: 8,626049567800306
+Czas po któym musi się rozpocząć kolejna operacja: 0,6794893488646625
+Czy można pauzować?: False
+Potrzebne materiały (ostatnia kolumna oznacza % postępu, w którym są potrzebne):
+ 0 0 17 0 0 0 100
+Produkowane materiały (ostatnia kolumna oznacza % postępu, w którym są produkowane):
+ 72 0 0 0 0 0 100
+Proces o id= 2
+Priorytet: 5
+Maksymalny czas trwania: 4003
+Operacje wchodzące w skład procesu:
+
+Operacja o id=0
+Czas po którym musi się rozpocząć po zakończeniu poprzedniej: -1
+Czas po któym musi się rozpocząć kolejna operacja: -1
+Czy można pauzować?: False
+Potrzebne materiały (ostatnia kolumna oznacza % postępu, w którym są potrzebne):
+ 0 0 0 0 9 0 100
+Produkowane materiały (ostatnia kolumna oznacza % postępu, w którym są produkowane):
+ 29 0 0 0 0 0 100
+
+Operacja o id=7
+Czas po którym musi się rozpocząć po zakończeniu poprzedniej: 8,626049567800306
+Czas po któym musi się rozpocząć kolejna operacja: 0,6794893488646625
+Czy można pauzować?: False
+Potrzebne materiały (ostatnia kolumna oznacza % postępu, w którym są potrzebne):
+ 0 0 17 0 0 0 100
+Produkowane materiały (ostatnia kolumna oznacza % postępu, w którym są produkowane):
+ 72 0 0 0 0 0 100
+
+Operacja o id=2
+Czas po którym musi się rozpocząć po zakończeniu poprzedniej: -1
+Czas po któym musi się rozpocząć kolejna operacja: -1
+Czy można pauzować?: False
+Potrzebne materiały (ostatnia kolumna oznacza % postępu, w którym są potrzebne):
+ 0 0 0 0 0 78 100
+Produkowane materiały (ostatnia kolumna oznacza % postępu, w którym są produkowane):
+ 40 0 0 0 0 0 100
+
+Operacja o id=4
+Czas po którym musi się rozpocząć po zakończeniu poprzedniej: -1
+Czas po któym musi się rozpocząć kolejna operacja: -1
+Czy można pauzować?: True
+Maksymalny czas pauzy: 0,4219264658579669
+Maksymalna ilość pauz (-1 oznacza nieskończoność): 2
+Potrzebne materiały (ostatnia kolumna oznacza % postępu, w którym są potrzebne):
+ 0 48 0 0 0 0 100
+Produkowane materiały (ostatnia kolumna oznacza % postępu, w którym są produkowane):
+ 32 0 0 0 0 0 100
+
+Liczba produktów na początku procesu produkcyjnego: 51 22 98 70 50 42
+
+Ustawienia algorytmów:
+Populacja początkowa: 100
+Maksymalna populacja: 1000
+Procent najlepszych osobników do reprodukcji: 100
+Procent mutowanych osobników: 10
+Populacja początkowa: 1
+
+Wagi: a:0,7,c:0,7,d:0,6,e:0,9,f:0,2,g:0,3,t:1

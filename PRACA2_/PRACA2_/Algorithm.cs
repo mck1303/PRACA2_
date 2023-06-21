@@ -174,9 +174,23 @@ namespace Opracowanie_heurystyk
 
 
                     }
+                    
                 }
             }
-
+            for (int i = 0; i < newBorn.Count; i++)
+            {
+                for (int j = newBorn[i].Count - 1; j > 0; j--)
+                {
+                    if (newBorn[i][j].O == newBorn[i][j - 1].O & newBorn[i][j].P == newBorn[i][j - 1].P & newBorn[i][j].Time == newBorn[i][j - 1].Time)
+                    {
+                        double newtime = newBorn[i][j].Time + newBorn[i][j - 1].Time;
+                        OP newOP = new OP(newBorn[i][j].P, newBorn[i][j].O, newtime);
+                        newBorn[i].Remove(newBorn[i][j]);
+                        newBorn[i].Remove(newBorn[i][j - 1]);
+                        newBorn[i].Add(newOP);
+                    }
+                }
+            }
             return newBorn;
 
             
@@ -314,6 +328,7 @@ namespace Opracowanie_heurystyk
                     ww.Add(new OP(-1, -1, -1));
                     new_sol.Add(ww);
                 }
+                int[] check=new int[pp.Count] ;
                 for(int i = 0; i < proces_order.Count; i++)
                 {
                     double last_proc=0;
@@ -335,31 +350,67 @@ namespace Opracowanie_heurystyk
                         {
                             if (new_sol[m_indx].Count == 1)
                             {
-                                new_sol[m_indx].Add(new OP( proces_order[i],-2, last_proc));
+                                new_sol[m_indx].Add(new OP(proces_order[i],-2, last_proc));
 
                                 new_sol[m_indx].Add(new OP(proces_order[i], pp[proces_order[i]].operations[j].id, mm[m_indx].operation_time[pp[proces_order[i]].operations[j].id]));
 
-                                machine_times[m_indx] += mm[m_indx].operation_time[pp[proces_order[i]].operations[j].id];
-                                last_proc += machine_times[m_indx];
+                                machine_times[m_indx] += mm[m_indx].operation_time[pp[proces_order[i]].operations[j].id]+ last_proc;
+                                last_proc = machine_times[m_indx];
                             }
                             else
                             {
                                 int l_oper = new_sol[m_indx].Last().O;
-                                new_sol[m_indx].Add(new OP(proces_order[i], -2, last_proc- machine_times[m_indx] + mm[m_indx].change_matrix[l_oper, pp[proces_order[i]].operations[j].id]));
+                                if (machine_times[m_indx]<= last_proc)
+                                {
+                                    double u = 0;
+                                    if (last_proc - machine_times[m_indx] > mm[m_indx].change_matrix[l_oper, pp[proces_order[i]].operations[j].id])
+                                    {
+                                        u = last_proc - machine_times[m_indx];
+                                    }
+                                    else
+                                    {
+                                        u = mm[m_indx].change_matrix[l_oper, pp[proces_order[i]].operations[j].id];
+                                    }
+                                    new_sol[m_indx].Add(new OP(proces_order[i], -2, u));
 
-                                new_sol[m_indx].Add(new OP(proces_order[i], pp[proces_order[i]].operations[j].id, mm[m_indx].operation_time[pp[proces_order[i]].operations[j].id]));
+                                    new_sol[m_indx].Add(new OP(proces_order[i], pp[proces_order[i]].operations[j].id, mm[m_indx].operation_time[pp[proces_order[i]].operations[j].id]));
 
-                                machine_times[m_indx] += mm[m_indx].operation_time[pp[proces_order[i]].operations[j].id] + last_proc - machine_times[m_indx] + mm[m_indx].change_matrix[l_oper, pp[proces_order[i]].operations[j].id];
-                                last_proc += machine_times[m_indx];
+                                    machine_times[m_indx] += mm[m_indx].operation_time[pp[proces_order[i]].operations[j].id] + u;
+                                    last_proc = machine_times[m_indx];
+                                }
+                                else
+                                {
+                                    new_sol[m_indx].Add(new OP(proces_order[i], -2, mm[m_indx].change_matrix[l_oper, pp[proces_order[i]].operations[j].id]));
+
+                                    new_sol[m_indx].Add(new OP(proces_order[i], pp[proces_order[i]].operations[j].id, mm[m_indx].operation_time[pp[proces_order[i]].operations[j].id]));
+
+                                    machine_times[m_indx] += mm[m_indx].operation_time[pp[proces_order[i]].operations[j].id] + mm[m_indx].change_matrix[l_oper, pp[proces_order[i]].operations[j].id];
+                                    last_proc = machine_times[m_indx];
+                                }
+                                
                             }
                             
                         }
                         else
                         {
-                            new_sol[m_indx].Add(new OP( proces_order[i], pp[proces_order[i]].operations[j].id, mm[m_indx].operation_time[pp[proces_order[i]].operations[j].id]));
+                            if (new_sol[m_indx].Count == 1)
+                            {
+                                new_sol[m_indx].Add(new OP(proces_order[i], pp[proces_order[i]].operations[j].id, mm[m_indx].operation_time[pp[proces_order[i]].operations[j].id]));
 
-                            machine_times[m_indx] += mm[m_indx].operation_time[pp[proces_order[i]].operations[j].id];
-                            last_proc += machine_times[m_indx];
+                                machine_times[m_indx] += mm[m_indx].operation_time[pp[proces_order[i]].operations[j].id];
+                                last_proc = machine_times[m_indx];
+                            }
+                            else
+                            {
+                                int l_oper = new_sol[m_indx].Last().O;
+                                new_sol[m_indx].Add(new OP(proces_order[i], -2, mm[m_indx].change_matrix[l_oper, pp[proces_order[i]].operations[j].id]));
+
+                                new_sol[m_indx].Add(new OP(proces_order[i], pp[proces_order[i]].operations[j].id, mm[m_indx].operation_time[pp[proces_order[i]].operations[j].id]));
+
+                                machine_times[m_indx] += mm[m_indx].operation_time[pp[proces_order[i]].operations[j].id] + mm[m_indx].change_matrix[l_oper, pp[proces_order[i]].operations[j].id];
+                                last_proc = machine_times[m_indx];
+                            }
+                                
                         }
 
                     }
@@ -368,6 +419,8 @@ namespace Opracowanie_heurystyk
                 {
                     new_sol[i].Remove(new_sol[i][0]);
                 }
+
+
 
                 return new_sol;
 
@@ -450,7 +503,7 @@ namespace Opracowanie_heurystyk
 
         
 
-        public List<List<OP>> Run_Algorithm(double[] start_quant, List<Operation> oo, List<Machine> mm, List<Process> pp, int algorithm_mode,  int starting_quant, double a, double b, double c, double d, double e, double f, double g, double t,  int max_iterations = 1000, int population=100, int best_percentage=20, int mut_percentage=10, double time_of_pause=10.0, string name="NoName")//algorithm mode: 1-only genetic, 2-johnson on start, 3- full johnson and genetic
+        public List<List<OP>> Run_Algorithm(double[] start_quant, List<Operation> oo, List<Machine> mm, List<Process> pp, int algorithm_mode,  int starting_quant, double a, double c, double d, double e, double f, double g, double t,  int max_iterations = 1000, int population=100, int best_percentage=20, int mut_percentage=10, double time_of_pause=10.0, string name="NoName")//algorithm mode: 1-only genetic, 2-johnson on start, 3- full johnson and genetic, 4-genetic and johnson on finish
         {
             int global_OP_id = 0;
             List<List<OP>> best_result = new List<List<OP>>();
@@ -460,7 +513,7 @@ namespace Opracowanie_heurystyk
             List<double> family_1_values=new List<double>();
             List<double> f_val = new List<double>();
             Simulation sim = new Simulation(pp, oo, mm);//, start_quant);
-            CostFunction cost = new CostFunction(a, b, c, d, t, e, f, g, start_quant);
+            CostFunction cost = new CostFunction(a, c, d, t, e, f, g, start_quant);
             double[] b_values= new double[max_iterations];
 
             OPList OPL = new OPList();
@@ -627,6 +680,16 @@ namespace Opracowanie_heurystyk
                         if (best_value == -1)
                         {
                             best_value = family_1_values[j];
+                            best_result = new List<List<OP>>();
+                            for (int k = 0; k < family_1[j].Count; k++)
+                            {
+                                List<OP> p = new List<OP>();
+                                for (int l = 0; l < family_1[j][k].Count; l++)
+                                {
+                                    p.Add(family_1[j][k][l]);
+                                }
+                                best_result.Add(p);
+                            }
                         }
                         if (family_1_values[j] < best_value)
                         {
@@ -642,6 +705,86 @@ namespace Opracowanie_heurystyk
                                 best_result.Add(p);
                             }
                             
+                        }
+                    }
+                    f_val.Sort();
+                    //f_val.Reverse();
+                    b_values[i] = best_value;
+                    for (int j = 0; j < best_objects; j++)
+                    {
+                        int x = family_1_values.IndexOf(f_val[j]);
+                        family_1_values[x] = 0;
+                        family_2.Add(family_1[x]);
+                    }
+                    family_1 = family_2;
+                    while (family_1.Count < population)
+                    {
+                        int x = rnd.Next(0, family_2.Count);
+                        int y = rnd.Next(0, family_2.Count);
+                        while (x == y)
+                        {
+                            y = rnd.Next(0, family_2.Count);
+                        }
+                        family_1.Add(OPL.Shuffle(family_2[x], family_2[y], mm));
+                    }
+                    family_1 = OPL.Mutation(family_1, mut_percentage, time_of_pause);
+
+                }
+            }
+
+            else if (algorithm_mode == 4)
+            {
+                
+                for (int i = 0; i < starting_quant; i++)
+                {
+                    family_1.Add(OPL.NewRandomOPList(pp, mm, oo, global_OP_id));
+                }
+
+                for (int i = 0; i < max_iterations; i++)
+                {
+                    List<List<List<OP>>> family_3 = new List<List<List<OP>>>();
+                    Console.WriteLine("Iteration: {0}", i);
+                    family_1_values = new List<double>();
+                    f_val = new List<double>();
+                    for (int j = 0; j < family_1.Count; j++)
+                    {
+                        family_3.Add(Johnson(family_1[j], pp.Count, pp, mm));
+                    }
+                    List<List<List<OP>>> family_2 = new List<List<List<OP>>>();
+                    for (int j = 0; j < family_1.Count; j++)
+                    {
+
+                        List<List<List<double>>> cnt = sim.CountTime(family_3[j]);
+                        family_1_values.Add(cost.CountCost(cnt[0], pp, oo, cnt[1], cnt[2]));
+                        f_val.Add(family_1_values[j]);
+                        if (best_value == -1)
+                        {
+                            best_value = family_1_values[j];
+                            best_result = new List<List<OP>>();
+                            for (int k = 0; k < family_3[j].Count; k++)
+                            {
+                                List<OP> p = new List<OP>();
+                                for (int l = 0; l < family_3[j][k].Count; l++)
+                                {
+                                    p.Add(family_3[j][k][l]);
+                                }
+                                best_result.Add(p);
+                            }
+                        }
+                        if (family_1_values[j] < best_value)
+                        {
+                            best_value = family_1_values[j];
+                            best_result = new List<List<OP>>();
+                            for (int k = 0; k < family_3[j].Count; k++)
+                            {
+                                List<OP> p = new List<OP>();
+                                for (int l = 0; l < family_3[j][k].Count; l++)
+                                {
+                                    p.Add(family_3[j][k][l]);
+                                }
+                                best_result.Add(p);
+                            }
+
                         }
                     }
                     f_val.Sort();

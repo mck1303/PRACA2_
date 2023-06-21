@@ -46,10 +46,27 @@ namespace Opracowanie_heurystyk
 
         }
 
-        public CostFunction(double a, double b, double c, double d, double t, double e, double f, double g, double[] prod_quant)
+        public int Comp_S_T(List<double> x, List<double> y)
+        {
+            if (x[3] < y[3])
+            {
+                return -1;
+            }
+            else if (x[3] > y[3])
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+
+        }
+
+
+        public CostFunction(double a, double c, double d, double t, double e, double f, double g, double[] prod_quant)
         {
             this.a = a;
-            this.b = b;
             this.c = c;
             this.d = d;
             this.t = t;
@@ -63,7 +80,6 @@ namespace Opracowanie_heurystyk
         public double CountCost(List<List<double>> s_times, List<Process> pp, List<Operation> oo, List<List<double>> production, List<List<double>> needs, int mode = 0, string name="Y")
         {
             int process_break = 0;
-            double time_window_wrong = 0;
             int too_many_pauses = 0;
             double pauseTime = 0;
             double all_prod_time = 0;
@@ -134,7 +150,7 @@ namespace Opracowanie_heurystyk
                     start_times.Sort();
                     finish_times.Sort();
                     pauseCount = start_times.Count - 1;
-                    if (pauseCount > oo[indx].pauseCount & pauseCount != -1)
+                    if (pauseCount > oo[indx].pauseCount & pauseCount != 0)
                     {
                         too_many_pauses += oo[indx].pauseCount - pauseCount;
                     }
@@ -153,7 +169,7 @@ namespace Opracowanie_heurystyk
                     if (last_oper != -1)
                     {
 
-                        if (last_oper_ft > start_times[0])
+                        if (last_oper_ft > start_times[0] +0.00001)
                         {
                             process_break++;
                         }
@@ -222,7 +238,6 @@ namespace Opracowanie_heurystyk
 
             double sum = 0;
             sum += process_break * a;
-            sum += time_window_wrong * b;
             sum += too_many_pauses * c;
             sum += pauseTime * d;
             sum += all_prod_time * t;
@@ -235,20 +250,47 @@ namespace Opracowanie_heurystyk
             }
             if (mode != 0)
             {
+                
+                s_times.Sort(Comp_S_T);
                 string paths = "C:\\Users\\Maciek\\Desktop\\PRACA2_\\WYNIKI\\";
                 using (StreamWriter writer = new StreamWriter(paths + name + "_b_res.txt"))
                 {
                     writer.WriteLine("Wyniki rozwiązania testu o kryptonimie: {0}", name);
                     writer.WriteLine("Ilość zaburzeń procesów: {0}", process_break);
-                    writer.WriteLine("Ilość złych okien czasowych: {0}", time_window_wrong); //TODO do usuniecia
                     writer.WriteLine("Ilość przypadków zbyt wielu pauz: {0}", too_many_pauses);
                     writer.WriteLine("Czas przekaczający maksymalny czas pauz: {0}", pauseTime);
                     writer.WriteLine("Całkowity czas produkcji: {0}", all_prod_time);
-                    writer.WriteLine("Ilość niedotrzymanych priorytetów: {0}", priority_fail);
+                    writer.WriteLine("Różnica czasu ukończenia procesów z wyzszym priorytetem i niższym (nieuwzględnienie priorytetów): {0}", priority_fail);
                     writer.WriteLine("Czas wykraczający poza maksymalną długość okna czasowego: {0}", too_big_window);
                     writer.WriteLine("Ilość nieotrzymanych materiałów: {0}", quant_of_lost_sources);
+                    writer.WriteLine("");
+                    writer.WriteLine("Struktura najlepszej kombinacji:");
+                    for (int i=0; i<pp.Count; i++)
+                    {
+                        writer.WriteLine("Proces {0}",i);
+                        for (int j = 0; j < s_times.Count; j++)
+                        {
+                            if (s_times[j][1] == i)
+                            {
+                                if (s_times[j][4] == 0)
+                                {
+                                    writer.WriteLine("START O:{0} M:{1}, Czas:{2},", s_times[j][2], s_times[j][0], s_times[j][3]);
+                                }
+                                if (s_times[j][4] == 9)
+                                {
+                                    writer.WriteLine("STOP O:{0} M:{1}, Czas:{2},", s_times[j][2], s_times[j][0], s_times[j][3]);
+                                }
+                            }
+                        }
+                    }
+
+                }
+                if (process_break > 0)
+                {
+                    Console.WriteLine("UTINI");
                 }
             }
+            
             return sum;
 
         }
@@ -284,12 +326,13 @@ namespace Opracowanie_heurystyk
             this.machines_time = new List<double>(new double[mm.Count]);
             for (int i = 0; i < solution.Count; i++)
             {
+                int recording = 0;
                 for (int j = 0; j < solution[i].Count; j++)
                 {
 
                     if (solution[i][j].O == -1 | solution[i][j].O == -2)
                     {
-                        this.machines_time[i] = this.machines_time[i] + solution[i][j].Time;
+                        this.machines_time[i] += solution[i][j].Time;
 
                     }
                     else
@@ -312,6 +355,7 @@ namespace Opracowanie_heurystyk
                                     {
                                         passing = 1;
                                         wh = 1;
+                                        
                                     }
                                     else
                                     {
@@ -332,8 +376,25 @@ namespace Opracowanie_heurystyk
                             }
 
                         }
+                        if (j != 0)
+                        {
+                            if (solution[i][j - 1].O == -2 | solution[i][j - 1].O == -1)
+                            {
+                                recording = 1;
+                            }
+                            else
+                            {
+                                recording = 0;
+                            }
+                        }
+                        
+                        if (recording != 1 & j!= 0)
+                        {
+                            this.machines_time[i] += last_o_delay;
 
-                        this.machines_time[i] = this.machines_time[i] + last_o_delay;
+                        }
+
+                        
                         this.operations_time.Add(new List<double> { i, solution[i][j].P, solution[i][j].O, this.machines_time[i], 0 });
 
 
@@ -626,7 +687,7 @@ namespace Opracowanie_heurystyk
                 }
                 int alg_mode = 3;
                 double aa = 0.7;
-                double bb = 0.4;
+
                 double c = 0.7;
                 double d = 0.6;
                 double e = 0.9;
@@ -640,9 +701,9 @@ namespace Opracowanie_heurystyk
                 double time_of_pause = 10.0;
                 int start_pop = 100;
                 Algorithm Al = new Algorithm(1);
-                List<List<OP>> res = Al.Run_Algorithm(products_quant, all_operations, all_machines, all_processes, alg_mode, start_pop, aa, bb, c, d, e, f, g, tt, max_iterations, population, best_percentage, mut_percentage, time_of_pause, name);
+                List<List<OP>> res = Al.Run_Algorithm(products_quant, all_operations, all_machines, all_processes, alg_mode, start_pop, aa, c, d, e, f, g, tt, max_iterations, population, best_percentage, mut_percentage, time_of_pause, name);
                 SaveResults save = new SaveResults();
-                save.save_res(name, all_machines, all_processes, products_quant, alg_mode, res, aa, bb, c, d, e, f, g, tt, start_pop, max_iterations, population, best_percentage, mut_percentage);
+                save.save_res(name, all_machines, all_processes, products_quant, alg_mode, res, aa, c, d, e, f, g, tt, start_pop, max_iterations, population, best_percentage, mut_percentage);
 
             }
 
@@ -789,11 +850,11 @@ namespace Opracowanie_heurystyk
 
                 int alg_mode = 1;
                 double aa = 0.7;
-                double b = 0.4;
+
                 double c = 0.7;
                 double d = 0.6;
-                double e = 0.9;
-                double f = 0.2;
+                double e = 1;
+                double f = 10;
                 double g = 0.3;
                 double t = 0.3;
                 int max_iterations = 1000;
@@ -803,16 +864,16 @@ namespace Opracowanie_heurystyk
                 double time_of_pause = 10.0;
                 int start_pop = 100;
                 Algorithm Al = new Algorithm(1);
-                List<List<OP>> res = Al.Run_Algorithm(products_quant, all_operations, all_machines, all_processes, alg_mode, start_pop, aa, b, c, d, e, f, g, t, max_iterations, population, best_percentage, mut_percentage, time_of_pause, name);
+                List<List<OP>> res = Al.Run_Algorithm(products_quant, all_operations, all_machines, all_processes, alg_mode, start_pop, aa,  c, d, e, f, g, t, max_iterations, population, best_percentage, mut_percentage, time_of_pause, name);
                 SaveResults save = new SaveResults();
-                save.save_res(name, all_machines, all_processes, products_quant, alg_mode, res, aa, b, c, d, e, f, g, t, start_pop, max_iterations, population, best_percentage, mut_percentage);
+                save.save_res(name, all_machines, all_processes, products_quant, alg_mode, res, aa,  c, d, e, f, g, t, start_pop, max_iterations, population, best_percentage, mut_percentage);
 
             }
             if (mode_of_creation == 2)
             {
 
                 Random rnd = new Random();
-                int p = rnd.Next(1, 7);
+                int p = rnd.Next(2, 5);
                 int o = rnd.Next(p * 2, p * 3);
                 int m = rnd.Next(1, o / 2);
                 int mean_time = 10;
@@ -978,9 +1039,8 @@ namespace Opracowanie_heurystyk
 
                 }
 
-                int alg_mode = 1;
-                double aa = 0.7;
-                double b = 0.4;
+                int alg_mode = 4;
+                double aa = 100;
                 double c = 0.7;
                 double d = 0.6;
                 double e = 0.9;
@@ -994,9 +1054,9 @@ namespace Opracowanie_heurystyk
                 double time_of_pause = 10.0;
                 int start_pop = 100;
                 Algorithm Al = new Algorithm(1);
-                List<List<OP>> res = Al.Run_Algorithm(products_quant, all_operations, all_machines, all_processes, alg_mode, start_pop, aa, b, c, d, e, f, g, t, max_iterations, population, best_percentage, mut_percentage, time_of_pause, name);
+                List<List<OP>> res = Al.Run_Algorithm(products_quant, all_operations, all_machines, all_processes, alg_mode, start_pop, aa, c, d, e, f, g, t, max_iterations, population, best_percentage, mut_percentage, time_of_pause, name);
                 SaveResults save = new SaveResults();
-                save.save_res(name, all_machines, all_processes, products_quant, alg_mode, res, aa, b, c, d, e, f, g, t, start_pop, max_iterations, population, best_percentage, mut_percentage);
+                save.save_res(name, all_machines, all_processes, products_quant, alg_mode, res, aa, c, d, e, f, g, t, start_pop, max_iterations, population, best_percentage, mut_percentage);
             }
 
 

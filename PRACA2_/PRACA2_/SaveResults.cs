@@ -8,7 +8,7 @@ namespace Opracowanie_heurystyk
 {
     public class SaveResults
     {
-        public void save_res(string name, List<Machine> all_machines, List<Process> all_processes, double[] start_quant, int alg_mode, List<List<OP>> res, double a, double b, double c, double d, double e, double f, double g, double t, int start_pop, int max_iterations, int population, int best_percentage, int mut_percentage)
+        public void save_res(string name, List<Machine> all_machines, List<Process> all_processes, double[] start_quant, int alg_mode, List<List<OP>> res, double a, double c, double d, double e, double f, double g, double t, int start_pop, int max_iterations, int population, int best_percentage, int mut_percentage)
         {
             string paths = "C:\\Users\\Maciek\\Desktop\\PRACA2_\\WYNIKI\\";
             using (StreamWriter writer = new StreamWriter(paths + name + ".txt"))
@@ -131,7 +131,7 @@ namespace Opracowanie_heurystyk
                 writer.WriteLine("Procent mutowanych osobników: {0}", best_percentage);
                 writer.WriteLine("Populacja początkowa: {0}", mut_percentage);
                 writer.WriteLine("");
-                writer.WriteLine("Wagi: a:{0},b:{1},c:{2},d:{3},e:{4},f:{5},g:{6},t:{7}", a, b, c, d, e, f, g, t);
+                writer.WriteLine("Wagi: a:{0},c:{1},d:{2},e:{3},f:{4},g:{5},t:{6}", a, c, d, e, f, g, t);
             }
         }
     }
