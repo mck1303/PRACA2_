@@ -198,7 +198,7 @@ namespace Opracowanie_heurystyk
             {
                 for (int j = i + 1; j < processes_f_time.Count; j++) //jesli sie psuje dac ifa przed petla
                 {
-                    if (processes_f_time[i] > processes_f_time[j] & pp[i].priority < pp[j].priority)
+                    if (processes_f_time[i] > processes_f_time[j] & pp[i].priority > pp[j].priority)
                     {
                         priority_fail += processes_f_time[i] - processes_f_time[j];
                     }
@@ -473,8 +473,7 @@ namespace Opracowanie_heurystyk
                     List<Operation> proc_oper = new List<Operation>();
                     Console.WriteLine("Podaj priorytet procesu (1-9, gdzie 1 to najwyższy priorytet)");
                     int prio = Int32.Parse(Console.ReadLine());
-                    Console.WriteLine("Podaj maksymalny czas wykonania procesu. Wpisz -1 jeśli nie ma limitu");
-                    int max_t = Int32.Parse(Console.ReadLine());
+
 
 
                     Console.WriteLine("Przechodzimy do skompletowania operacji tego procesu");
@@ -633,7 +632,7 @@ namespace Opracowanie_heurystyk
                         }
 
                     }
-                    all_processes.Add(new Process(global_p_id, proc_oper, max_t, prio));
+                    all_processes.Add(new Process(global_p_id, proc_oper, prio));
                     global_p_id++;
                 }
                 for (int i = 0; i < prod_num; i++)
@@ -843,7 +842,7 @@ namespace Opracowanie_heurystyk
                                 }
                                 
                             }
-                            all_processes.Add(new Process(i, opera, records[i].MaxTime, records[i].Priority));
+                            all_processes.Add(new Process(i, opera, records[i].Priority));
                         }
                     }
                 }
@@ -994,7 +993,7 @@ namespace Opracowanie_heurystyk
 
                     }
 
-                    all_processes.Add(new Process(global_p_id, proc_oper, max_t, prio));
+                    all_processes.Add(new Process(global_p_id, proc_oper, prio));
                     global_p_id++;
                 }
                 if (all_operations.Count < o)
