@@ -95,13 +95,15 @@ namespace Opracowanie_heurystyk
             {
                 newBorn.Add(new List<OP> { new OP(-1, -1, -1) });
                 int x = rnd.Next(0, 2);
+                
                 if (x == 0)
                 {
                     for (int j=0;j< a[i].Count; j++)
                     {
-                        for(int k = 0; k < all_op.Count; k++)
+                        int check = 0;
+                        for (int k = 0; k < all_op.Count; k++)
                         {
-                            if (a[i][j].O == all_op[k].O & a[i][j].P == all_op[k].P | a[i][j].O == -1 | a[i][j].O == -2)
+                            if (a[i][j].O == all_op[k].O & a[i][j].P == all_op[k].P | a[i][j].O == -1 & check==0 | a[i][j].O == -2 & check==0)
                             {
 
                                 newBorn[i].Add(a[i][j]);
@@ -109,7 +111,7 @@ namespace Opracowanie_heurystyk
                                 {
                                     all_op.Remove(all_op[k]);
                                 }
-
+                                check = 1;
 
                             }
                         }
@@ -197,17 +199,51 @@ namespace Opracowanie_heurystyk
 
         }
 
-        public List<List<List<OP>>> Mutation(List<List<List<OP>>> OPs, int mut_percentage, double time_of_pause)
+        public List<List<List<OP>>> Mutation(List<List<List<OP>>> OPs, int mut_percentage, double time_of_pause, List<Machine> mm)
         {
             Random rnd = new Random();
+            
             for (int i = 0; i < mut_percentage * OPs.Count / 100; i++)
             {
-                int x = rnd.Next(0, OPs.Count);
-                int y = rnd.Next(0, OPs[x].Count);
-                int z = rnd.Next(0, OPs[x][y].Count);
-                if (OPs[x][y].Count != 0)
+                int mode = rnd.Next(0, 2);
+                if (mode == 0){
+                    int x = rnd.Next(0, OPs.Count);
+                    int y = rnd.Next(0, OPs[x].Count);
+                    int z = rnd.Next(0, OPs[x][y].Count);
+                    if (OPs[x][y].Count != 0)
+                    {
+                        OPs[x][y].Insert(z, new OP(OPs[x][y][z].P, -2, rnd.NextDouble() * time_of_pause));
+                    }
+                }
+                if (mode == 1)
                 {
-                    OPs[x][y].Insert(z, new OP(OPs[x][y][z].P, -2, rnd.NextDouble() * time_of_pause));
+                    int x = rnd.Next(0, OPs.Count);
+                    int y = rnd.Next(0, OPs[x].Count);
+                    int z = rnd.Next(0, OPs[x][y].Count);
+                    int Oo = OPs[x][y][z].O;
+                    OP change = OPs[x][y][z];
+                    OPs[x][y].Remove(change);
+                    int choice = -1;
+                    if (Oo == -1 | Oo == -2)
+                    {
+                        choice = rnd.Next(0,mm.Count);
+                    }
+                    else
+                    {
+                        List<int> availble = new List<int> { };
+                        for (int j = 0; j < mm.Count(); j++)
+                        {
+                            if (mm[j].operation_time[Oo] > 0)
+                            {
+                                availble.Add(mm[j].id);
+                            }
+                        }
+                        choice = availble[rnd.Next(0, availble.Count())];
+                    }
+                    
+                    int a= rnd.Next(0, OPs[x][choice].Count);
+                    OPs[x][choice].Insert(a, change);
+
                 }
                 
             }
@@ -218,8 +254,8 @@ namespace Opracowanie_heurystyk
     
     public class Algorithm //johnson po ustaleniu kolejności ale przed mutacjami, dawać do czasu czas przestrojenia i wykonania
     {
-        string paths = "C:\\Users\\Maciek\\Desktop\\PRACA2_\\WYNIKI\\Na wykresy\\";
-        public int mode; //0 - tylko genetyczny, 1 - genetyczny z początkowym johnsona, 2 - genetyczny z johnsona w każdej generacji
+        string paths = "C:\\Users\\Emperor\\Desktop\\PRACA2_\\WYNIKI\\Na wykresy\\";//"C:\\Users\\Maciek\\Desktop\\PRACA2_\\WYNIKI\\Na wykresy\\";
+        public int mode; //1 - tylko genetyczny, 2 - genetyczny z początkowym johnsona, 3 - genetyczny z johnsona w każdej generacji, 4 - genetyczny z johnsonem tylko na końcu
         public Algorithm(int mode)
         {
             this.mode = mode;
@@ -561,7 +597,7 @@ namespace Opracowanie_heurystyk
                         }
                         family_1.Add(OPL.Shuffle(family_2[x], family_2[y],mm));
                     }
-                    family_1 = OPL.Mutation(family_1, mut_percentage, time_of_pause);
+                    family_1 = OPL.Mutation(family_1, mut_percentage, time_of_pause, mm);
                     
                 }
 
@@ -624,7 +660,7 @@ namespace Opracowanie_heurystyk
                         }
                         family_1.Add(OPL.Shuffle(family_2[x], family_2[y], mm));
                     }
-                    family_1 = OPL.Mutation(family_1, mut_percentage, time_of_pause);
+                    family_1 = OPL.Mutation(family_1, mut_percentage, time_of_pause,mm);
 
                 }
             }
@@ -702,7 +738,7 @@ namespace Opracowanie_heurystyk
                         }
                         family_1.Add(OPL.Shuffle(family_2[x], family_2[y], mm));
                     }
-                    family_1 = OPL.Mutation(family_1, mut_percentage, time_of_pause);
+                    family_1 = OPL.Mutation(family_1, mut_percentage, time_of_pause,mm);
 
                 }
             }
@@ -782,7 +818,7 @@ namespace Opracowanie_heurystyk
                         }
                         family_1.Add(OPL.Shuffle(family_2[x], family_2[y], mm));
                     }
-                    family_1 = OPL.Mutation(family_1, mut_percentage, time_of_pause);
+                    family_1 = OPL.Mutation(family_1, mut_percentage, time_of_pause,mm);
 
                 }
             }

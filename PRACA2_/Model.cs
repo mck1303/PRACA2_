@@ -252,7 +252,7 @@ namespace Opracowanie_heurystyk
             {
                 
                 s_times.Sort(Comp_S_T);
-                string paths = "C:\\Users\\Maciek\\Desktop\\PRACA2_\\WYNIKI\\";
+                string paths = paths = "C:\\Users\\Emperor\\Desktop\\PRACA2_\\WYNIKI\\";//"C:\\Users\\Maciek\\Desktop\\PRACA2_\\WYNIKI\\";
                 using (StreamWriter writer = new StreamWriter(paths + name + "_b_res.txt"))
                 {
                     writer.WriteLine("Wyniki rozwiązania testu o kryptonimie: {0}", name);
@@ -285,10 +285,7 @@ namespace Opracowanie_heurystyk
                     }
 
                 }
-                if (process_break > 0)
-                {
-                    Console.WriteLine("UTINI");
-                }
+
             }
             
             return sum;
@@ -433,7 +430,7 @@ namespace Opracowanie_heurystyk
     {
         static void Main(string[] args)
         {
-            //TODO wypisywanie wyników symulacji
+
             int global_o_id = 0;
             int global_p_id = 0;
             string name;
@@ -836,7 +833,7 @@ namespace Opracowanie_heurystyk
                 }
 
                 int alg_mode = 1;
-                double aa = 0.7;
+                double aa = 100;
 
                 double c = 0.7;
                 double d = 0.6;
@@ -1026,7 +1023,7 @@ namespace Opracowanie_heurystyk
 
                 }
 
-                int alg_mode = 4;
+                int alg_mode = 1;//1-4
                 double aa = 100;
                 double c = 0.7;
                 double d = 0.6;

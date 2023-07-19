@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "lvoUmHACd/GjBcfMzPzWmwcNWtWMA3JXo1l0vn8VNpxNEEISXxrKNvER23Ay8xY1r7VNjDbxcV6QqFXLM9hh5g==",
+  "dgSpecHash": "+uWxFRyFAZCtOUqTkxKznj/t55yCtq4ZA9dcf19niOHZjCPsu5QFr8r/OMdY232BIXMGg23wvWJklVwTbg/1oA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Maciek\\Desktop\\PRACA2_\\PRACA2_\\PRACA2_.csproj",
+  "projectFilePath": "C:\\Users\\Emperor\\Desktop\\PRACA2_\\PRACA2_\\PRACA2_.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Maciek\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512"
+    "C:\\Users\\Emperor\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512"
   ],
   "logs": []
 }
