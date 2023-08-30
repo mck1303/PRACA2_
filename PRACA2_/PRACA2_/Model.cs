@@ -169,7 +169,7 @@ namespace Opracowanie_heurystyk
                     if (last_oper != -1)
                     {
 
-                        if (last_oper_ft > start_times[0] +0.00001)
+                        if (last_oper_ft > start_times[0])
                         {
                             process_break++;
                         }
@@ -198,7 +198,7 @@ namespace Opracowanie_heurystyk
             {
                 for (int j = i + 1; j < processes_f_time.Count; j++) //jesli sie psuje dac ifa przed petla
                 {
-                    if (processes_f_time[i] > processes_f_time[j] & pp[i].priority > pp[j].priority)
+                    if (processes_f_time[i] > processes_f_time[j] & pp[i].priority < pp[j].priority)
                     {
                         priority_fail += processes_f_time[i] - processes_f_time[j];
                     }
@@ -252,7 +252,7 @@ namespace Opracowanie_heurystyk
             {
                 
                 s_times.Sort(Comp_S_T);
-                string paths = "C:\\Users\\Maciek\\Desktop\\PRACA2_\\WYNIKI\\";
+                string paths = paths = "C:\\Users\\Maciek\\Desktop\\PRACA2_\\WYNIKI\\";
                 using (StreamWriter writer = new StreamWriter(paths + name + "_b_res.txt"))
                 {
                     writer.WriteLine("Wyniki rozwiązania testu o kryptonimie: {0}", name);
@@ -285,10 +285,7 @@ namespace Opracowanie_heurystyk
                     }
 
                 }
-                if (process_break > 0)
-                {
-                    Console.WriteLine("UTINI");
-                }
+
             }
             
             return sum;
@@ -355,7 +352,7 @@ namespace Opracowanie_heurystyk
                                     {
                                         passing = 1;
                                         wh = 1;
-                                        
+                                        recording = 1;
                                     }
                                     else
                                     {
@@ -364,7 +361,7 @@ namespace Opracowanie_heurystyk
 
 
                                 }
-                                else { wh = 1; }
+                                else { wh = 1; recording = 0; }
                             }
                             if (passing == 1)
                             {
@@ -376,22 +373,9 @@ namespace Opracowanie_heurystyk
                             }
 
                         }
-                        if (j != 0)
-                        {
-                            if (solution[i][j - 1].O == -2 | solution[i][j - 1].O == -1)
-                            {
-                                recording = 1;
-                            }
-                            else
-                            {
-                                recording = 0;
-                            }
-                        }
-                        
-                        if (recording != 1 & j!= 0)
+                        if (recording != 1)
                         {
                             this.machines_time[i] += last_o_delay;
-
                         }
 
                         
@@ -446,7 +430,7 @@ namespace Opracowanie_heurystyk
     {
         static void Main(string[] args)
         {
-            //TODO wypisywanie wyników symulacji
+
             int global_o_id = 0;
             int global_p_id = 0;
             string name;
@@ -456,7 +440,7 @@ namespace Opracowanie_heurystyk
             List<Operation> all_operations = new List<Operation>();
             List<Process> all_processes = new List<Process>();
             List<Machine> all_machines = new List<Machine>();
-            int mode_of_creation = 2;//0-give info, 1-give CSV, 2-random
+            int mode_of_creation = 1;//0-give info, 1-give CSV, 2-random
 
             if (mode_of_creation == 0)
             {
@@ -473,7 +457,8 @@ namespace Opracowanie_heurystyk
                     List<Operation> proc_oper = new List<Operation>();
                     Console.WriteLine("Podaj priorytet procesu (1-9, gdzie 1 to najwyższy priorytet)");
                     int prio = Int32.Parse(Console.ReadLine());
-
+                    Console.WriteLine("Podaj maksymalny czas wykonania procesu. Wpisz -1 jeśli nie ma limitu");
+                    int max_t = Int32.Parse(Console.ReadLine());
 
 
                     Console.WriteLine("Przechodzimy do skompletowania operacji tego procesu");
@@ -842,26 +827,26 @@ namespace Opracowanie_heurystyk
                                 }
                                 
                             }
-                            all_processes.Add(new Process(i, opera, records[i].Priority));
+                            all_processes.Add(new Process(i, opera,  records[i].Priority));
                         }
                     }
                 }
 
-                int alg_mode = 1;
-                double aa = 0.7;
+                int alg_mode = 2;
+                double aa = 1000;
 
-                double c = 0.7;
-                double d = 0.6;
+                double c = 1;
+                double d = 1;
                 double e = 1;
-                double f = 10;
-                double g = 0.3;
-                double t = 0.3;
-                int max_iterations = 1000;
-                int population = 100;
+                double f = 1;
+                double g = 1;
+                double t = 1;
+                int max_iterations = 100;
+                int population = 10;
                 int best_percentage = 2;
                 int mut_percentage = 1;
-                double time_of_pause = 10.0;
-                int start_pop = 100;
+                double time_of_pause = 3;
+                int start_pop = 10;
                 Algorithm Al = new Algorithm(1);
                 List<List<OP>> res = Al.Run_Algorithm(products_quant, all_operations, all_machines, all_processes, alg_mode, start_pop, aa,  c, d, e, f, g, t, max_iterations, population, best_percentage, mut_percentage, time_of_pause, name);
                 SaveResults save = new SaveResults();
@@ -1038,7 +1023,7 @@ namespace Opracowanie_heurystyk
 
                 }
 
-                int alg_mode = 4;
+                int alg_mode = 1;//1-4
                 double aa = 100;
                 double c = 0.7;
                 double d = 0.6;

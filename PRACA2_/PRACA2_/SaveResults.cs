@@ -51,14 +51,13 @@ namespace Opracowanie_heurystyk
                 {
                     writer.WriteLine("Proces o id= {0}", all_processes[i].id);
                     writer.WriteLine("Priorytet: {0}", all_processes[i].priority);
-                    writer.WriteLine("Maksymalny czas trwania: {0}", all_processes[i].max_time);
                     writer.WriteLine("Operacje wchodzące w skład procesu:");
                     for (int j = 0; j < all_processes[i].operations.Count; j++)
                     {
                         writer.WriteLine("");
                         writer.WriteLine("Operacja o id={0}", all_processes[i].operations[j].id);
                         writer.WriteLine("Czas po którym musi się rozpocząć po zakończeniu poprzedniej: {0}", all_processes[i].operations[j].time_after_previous);
-                        writer.WriteLine("Czas po któym musi się rozpocząć kolejna operacja: {0}", all_processes[i].operations[j].time_before_next);
+                        writer.WriteLine("Czas po którym musi się rozpocząć kolejna operacja: {0}", all_processes[i].operations[j].time_before_next);
                         writer.WriteLine("Czy można pauzować?: {0}", all_processes[i].operations[j].canPause);
                         if (all_processes[i].operations[j].canPause)
                         {
