@@ -49,19 +49,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Emperor\\.nuget\\packages\\": {}
+    "C:\\Users\\Maciek\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Emperor\\Desktop\\PRACA2_\\PRACA2_\\PRACA2_.csproj",
+      "projectUniqueName": "C:\\Users\\Maciek\\Desktop\\PRACA2_\\PRACA2_\\PRACA2_.csproj",
       "projectName": "PRACA2_",
-      "projectPath": "C:\\Users\\Emperor\\Desktop\\PRACA2_\\PRACA2_\\PRACA2_.csproj",
-      "packagesPath": "C:\\Users\\Emperor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Emperor\\Desktop\\PRACA2_\\PRACA2_\\obj\\",
+      "projectPath": "C:\\Users\\Maciek\\Desktop\\PRACA2_\\PRACA2_\\PRACA2_.csproj",
+      "packagesPath": "C:\\Users\\Maciek\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Maciek\\Desktop\\PRACA2_\\PRACA2_\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Emperor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Maciek\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -108,7 +108,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

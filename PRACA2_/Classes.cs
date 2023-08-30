@@ -49,12 +49,12 @@ namespace Opracowanie_heurystyk
         public int id;
         public List<Operation> operations;
         public int priority;
-        public double max_time;
-        public Process(int id, List<Operation> operations, double max_time, int priority)
+
+        public Process(int id, List<Operation> operations, int priority)
         {
             this.id = id;
             this.operations = operations;
-            this.max_time = max_time;
+
             this.priority = priority;
         }
     }

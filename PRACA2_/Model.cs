@@ -252,7 +252,7 @@ namespace Opracowanie_heurystyk
             {
                 
                 s_times.Sort(Comp_S_T);
-                string paths = paths = "C:\\Users\\Emperor\\Desktop\\PRACA2_\\WYNIKI\\";//"C:\\Users\\Maciek\\Desktop\\PRACA2_\\WYNIKI\\";
+                string paths = paths = "C:\\Users\\Maciek\\Desktop\\PRACA2_\\WYNIKI\\";
                 using (StreamWriter writer = new StreamWriter(paths + name + "_b_res.txt"))
                 {
                     writer.WriteLine("Wyniki rozwiązania testu o kryptonimie: {0}", name);
@@ -440,7 +440,7 @@ namespace Opracowanie_heurystyk
             List<Operation> all_operations = new List<Operation>();
             List<Process> all_processes = new List<Process>();
             List<Machine> all_machines = new List<Machine>();
-            int mode_of_creation = 2;//0-give info, 1-give CSV, 2-random
+            int mode_of_creation = 1;//0-give info, 1-give CSV, 2-random
 
             if (mode_of_creation == 0)
             {
@@ -617,7 +617,7 @@ namespace Opracowanie_heurystyk
                         }
 
                     }
-                    all_processes.Add(new Process(global_p_id, proc_oper, max_t, prio));
+                    all_processes.Add(new Process(global_p_id, proc_oper, prio));
                     global_p_id++;
                 }
                 for (int i = 0; i < prod_num; i++)
@@ -827,26 +827,26 @@ namespace Opracowanie_heurystyk
                                 }
                                 
                             }
-                            all_processes.Add(new Process(i, opera, records[i].MaxTime, records[i].Priority));
+                            all_processes.Add(new Process(i, opera,  records[i].Priority));
                         }
                     }
                 }
 
                 int alg_mode = 1;
-                double aa = 100;
+                double aa = 1000;
 
-                double c = 0.7;
-                double d = 0.6;
+                double c = 1;
+                double d = 1;
                 double e = 1;
-                double f = 10;
-                double g = 0.3;
-                double t = 0.3;
-                int max_iterations = 1000;
-                int population = 100;
+                double f = 1;
+                double g = 1;
+                double t = 1;
+                int max_iterations = 100;
+                int population = 10;
                 int best_percentage = 2;
                 int mut_percentage = 1;
-                double time_of_pause = 10.0;
-                int start_pop = 100;
+                double time_of_pause = 3;
+                int start_pop = 10;
                 Algorithm Al = new Algorithm(1);
                 List<List<OP>> res = Al.Run_Algorithm(products_quant, all_operations, all_machines, all_processes, alg_mode, start_pop, aa,  c, d, e, f, g, t, max_iterations, population, best_percentage, mut_percentage, time_of_pause, name);
                 SaveResults save = new SaveResults();
@@ -978,7 +978,7 @@ namespace Opracowanie_heurystyk
 
                     }
 
-                    all_processes.Add(new Process(global_p_id, proc_oper, max_t, prio));
+                    all_processes.Add(new Process(global_p_id, proc_oper, prio));
                     global_p_id++;
                 }
                 if (all_operations.Count < o)
