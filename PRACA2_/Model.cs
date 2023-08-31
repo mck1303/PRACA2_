@@ -832,7 +832,7 @@ namespace Opracowanie_heurystyk
                     }
                 }
 
-                int alg_mode = 1;
+                int alg_mode = 4;
                 double aa = 1000;
 
                 double c = 1;
@@ -841,12 +841,12 @@ namespace Opracowanie_heurystyk
                 double f = 1;
                 double g = 1;
                 double t = 1;
-                int max_iterations = 100;
-                int population = 10;
+                int max_iterations = 1000;
+                int population = 1000;
                 int best_percentage = 2;
                 int mut_percentage = 1;
                 double time_of_pause = 3;
-                int start_pop = 10;
+                int start_pop = 1000;
                 Algorithm Al = new Algorithm(1);
                 List<List<OP>> res = Al.Run_Algorithm(products_quant, all_operations, all_machines, all_processes, alg_mode, start_pop, aa,  c, d, e, f, g, t, max_iterations, population, best_percentage, mut_percentage, time_of_pause, name);
                 SaveResults save = new SaveResults();

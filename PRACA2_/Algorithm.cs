@@ -409,11 +409,11 @@ namespace Opracowanie_heurystyk
                                 int l_oper = new_sol[m_indx].Last().O;
                                 if (machine_times[m_indx]<= last_proc)
                                 {
-                                    new_sol[m_indx].Add(new OP(proces_order[i], -2, last_proc - machine_times[m_indx] + mm[m_indx].change_matrix[l_oper, pp[proces_order[i]].operations[j].id]));
+                                    new_sol[m_indx].Add(new OP(proces_order[i], -2, last_proc - machine_times[m_indx])); //+ mm[m_indx].change_matrix[l_oper, pp[proces_order[i]].operations[j].id]));
 
                                     new_sol[m_indx].Add(new OP(proces_order[i], pp[proces_order[i]].operations[j].id, mm[m_indx].operation_time[pp[proces_order[i]].operations[j].id]));
 
-                                    machine_times[m_indx] += mm[m_indx].operation_time[pp[proces_order[i]].operations[j].id] + last_proc - machine_times[m_indx] + mm[m_indx].change_matrix[l_oper, pp[proces_order[i]].operations[j].id];
+                                    machine_times[m_indx] += mm[m_indx].operation_time[pp[proces_order[i]].operations[j].id] + last_proc - machine_times[m_indx]; //+ mm[m_indx].change_matrix[l_oper, pp[proces_order[i]].operations[j].id];
                                     last_proc = machine_times[m_indx];
                                 }
                                 else
