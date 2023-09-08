@@ -1,0 +1,55 @@
+Wyniki rozwiązania testu o kryptonimie: e22
+Ilość zaburzeń procesów: 0
+Ilość przypadków zbyt wielu pauz: 0
+Czas przekaczający maksymalny czas pauz: 0
+Całkowity czas produkcji: 282,03545317500004
+Różnica czasu ukończenia procesów z wyzszym priorytetem i niższym (nieuwzględnienie priorytetów): 203,113956884
+Czas wykraczający poza maksymalną długość okna czasowego: 0
+Ilość nieotrzymanych materiałów: 0
+
+Struktura najlepszej kombinacji:
+Proces 0
+START O:19 M:5, Czas:0,
+START O:0 M:2, Czas:24,41876376,
+STOP O:19 M:5, Czas:24,41876376,
+STOP O:0 M:2, Czas:54,23435628,
+START O:18 M:4, Czas:54,23435628,
+STOP O:18 M:4, Czas:54,677861521,
+START O:1 M:4, Czas:64,185025888,
+STOP O:1 M:4, Czas:115,345367858,
+Proces 1
+START O:17 M:5, Czas:33,952612563,
+STOP O:17 M:5, Czas:38,877517905000005,
+START O:2 M:5, Czas:41,25143958100001,
+STOP O:2 M:5, Czas:46,602949208000005,
+START O:16 M:8, Czas:138,50766134100002,
+STOP O:16 M:8, Czas:168,301476771,
+START O:3 M:6, Czas:270,73524902500003,
+STOP O:3 M:6, Czas:282,03545317500004,
+Proces 2
+START O:15 M:6, Czas:0,
+STOP O:15 M:6, Czas:39,60285431,
+START O:4 M:3, Czas:39,60285431,
+STOP O:4 M:3, Czas:122,35778408,
+START O:14 M:0, Czas:127,009381143,
+STOP O:14 M:0, Czas:208,712615393,
+START O:5 M:6, Czas:211,52098041200003,
+STOP O:5 M:6, Czas:266,58945530200003,
+Proces 3
+START O:13 M:9, Czas:0,
+STOP O:13 M:9, Czas:46,56927944,
+START O:6 M:8, Czas:85,702729899,
+STOP O:6 M:8, Czas:119,80182570900001,
+START O:12 M:8, Czas:120,83960217900001,
+STOP O:12 M:8, Czas:131,672247109,
+START O:7 M:3, Czas:135,78643497000004,
+STOP O:7 M:3, Czas:211,91221255000005,
+Proces 4
+START O:11 M:7, Czas:0,
+STOP O:11 M:7, Czas:40,05405024,
+START O:8 M:0, Czas:40,05405024,
+START O:10 M:8, Czas:61,68250883,
+STOP O:8 M:0, Czas:61,68250883,
+START O:9 M:1, Czas:83,75960758000001,
+STOP O:10 M:8, Czas:83,75960758000001,
+STOP O:9 M:1, Czas:118,15274117000001,

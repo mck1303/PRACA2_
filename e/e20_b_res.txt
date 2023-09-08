@@ -1,0 +1,55 @@
+Wyniki rozwiązania testu o kryptonimie: e20
+Ilość zaburzeń procesów: 0
+Ilość przypadków zbyt wielu pauz: 0
+Czas przekaczający maksymalny czas pauz: 0
+Całkowity czas produkcji: 355,991369605
+Różnica czasu ukończenia procesów z wyzszym priorytetem i niższym (nieuwzględnienie priorytetów): 52,773355838999976
+Czas wykraczający poza maksymalną długość okna czasowego: 0
+Ilość nieotrzymanych materiałów: 0
+
+Struktura najlepszej kombinacji:
+Proces 0
+START O:19 M:3, Czas:0,
+START O:0 M:8, Czas:68,08618076,
+STOP O:19 M:3, Czas:68,08618076,
+STOP O:0 M:8, Czas:162,24420457000002,
+START O:18 M:9, Czas:162,24420457000002,
+START O:1 M:5, Czas:180,22307560000002,
+STOP O:18 M:9, Czas:180,22307560000002,
+STOP O:1 M:5, Czas:211,62000598000003,
+Proces 1
+START O:17 M:2, Czas:0,
+STOP O:17 M:2, Czas:88,87423748,
+START O:2 M:7, Czas:91,462115346,
+STOP O:2 M:7, Czas:103,132152946,
+START O:16 M:9, Czas:181,66953192800003,
+STOP O:16 M:9, Czas:195,11381721800004,
+START O:3 M:4, Czas:203,46434760100001,
+STOP O:3 M:4, Czas:229,074407091,
+Proces 2
+START O:15 M:4, Czas:0,
+START O:4 M:0, Czas:73,35891451,
+STOP O:15 M:4, Czas:73,35891451,
+START O:14 M:6, Czas:166,80044482,
+STOP O:4 M:0, Czas:166,80044482,
+STOP O:14 M:6, Czas:249,16194774000002,
+START O:5 M:0, Czas:253,27920399200002,
+STOP O:5 M:0, Czas:279,825826442,
+Proces 3
+START O:13 M:5, Czas:213,80295297300003,
+STOP O:13 M:5, Czas:238,14596766300002,
+START O:6 M:9, Czas:244,30109586500004,
+STOP O:6 M:9, Czas:252,94476722700003,
+START O:12 M:7, Czas:255,963972256,
+STOP O:12 M:7, Czas:320,370368846,
+START O:7 M:4, Czas:325,17430208499997,
+STOP O:7 M:4, Czas:355,991369605,
+Proces 4
+START O:11 M:7, Czas:0,
+STOP O:11 M:7, Czas:40,05405024,
+START O:8 M:1, Czas:40,05405024,
+STOP O:8 M:1, Czas:103,98542036,
+START O:10 M:8, Czas:169,22020779200002,
+STOP O:10 M:8, Czas:191,29730654200003,
+START O:9 M:1, Czas:192,65933701300003,
+STOP O:9 M:1, Czas:227,05247060300002,

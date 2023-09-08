@@ -1,0 +1,55 @@
+Wyniki rozwiązania testu o kryptonimie: e30
+Ilość zaburzeń procesów: 0
+Ilość przypadków zbyt wielu pauz: 0
+Czas przekaczający maksymalny czas pauz: 0
+Całkowity czas produkcji: 211,07812549399998
+Różnica czasu ukończenia procesów z wyzszym priorytetem i niższym (nieuwzględnienie priorytetów): 0
+Czas wykraczający poza maksymalną długość okna czasowego: 0
+Ilość nieotrzymanych materiałów: 0
+
+Struktura najlepszej kombinacji:
+Proces 0
+START O:19 M:0, Czas:0,
+START O:0 M:2, Czas:25,29969438,
+STOP O:19 M:0, Czas:25,29969438,
+STOP O:0 M:2, Czas:55,1152869,
+START O:18 M:0, Czas:61,812510492,
+STOP O:18 M:0, Czas:68,275941236,
+START O:1 M:0, Czas:72,471481085,
+STOP O:1 M:0, Czas:127,57060733499999,
+Proces 1
+START O:17 M:4, Czas:0,
+STOP O:17 M:4, Czas:59,58377153,
+START O:2 M:7, Czas:59,58377153,
+START O:16 M:8, Czas:71,25380913000001,
+STOP O:2 M:7, Czas:71,25380913000001,
+STOP O:16 M:8, Czas:101,04762456,
+START O:3 M:4, Czas:102,298751299,
+STOP O:3 M:4, Czas:127,908810789,
+Proces 2
+START O:15 M:3, Czas:0,
+STOP O:15 M:3, Czas:21,08019984,
+START O:4 M:3, Czas:27,99036391,
+STOP O:4 M:3, Czas:110,74529368,
+START O:14 M:3, Czas:117,279721069,
+STOP O:14 M:3, Czas:171,773133949,
+START O:5 M:3, Czas:179,494556243,
+STOP O:5 M:3, Czas:202,044873163,
+Proces 3
+START O:13 M:1, Czas:0,
+STOP O:13 M:1, Czas:22,30092538,
+START O:6 M:1, Czas:24,998985464999997,
+STOP O:6 M:1, Czas:56,070237944999995,
+START O:12 M:4, Czas:133,529505478,
+STOP O:12 M:4, Czas:167,526264668,
+START O:7 M:4, Czas:174,822724263,
+STOP O:7 M:4, Czas:205,639791783,
+Proces 4
+START O:11 M:5, Czas:0,
+STOP O:11 M:5, Czas:83,63095754,
+START O:8 M:6, Czas:83,63095754,
+STOP O:8 M:6, Czas:127,57533851,
+START O:10 M:2, Czas:128,268644151,
+STOP O:10 M:2, Czas:164,43532036099998,
+START O:9 M:5, Czas:170,94063358399998,
+STOP O:9 M:5, Czas:211,07812549399998,

@@ -1,0 +1,55 @@
+Wyniki rozwiązania testu o kryptonimie: e10
+Ilość zaburzeń procesów: 0
+Ilość przypadków zbyt wielu pauz: 0
+Czas przekaczający maksymalny czas pauz: 0
+Całkowity czas produkcji: 504,792342123
+Różnica czasu ukończenia procesów z wyzszym priorytetem i niższym (nieuwzględnienie priorytetów): 0
+Czas wykraczający poza maksymalną długość okna czasowego: 0
+Ilość nieotrzymanych materiałów: 0
+
+Struktura najlepszej kombinacji:
+Proces 0
+START O:19 M:0, Czas:0,
+STOP O:19 M:0, Czas:25,29969438,
+START O:0 M:0, Czas:28,924772427999997,
+STOP O:0 M:0, Czas:65,739266318,
+START O:18 M:1, Czas:140,824975083,
+STOP O:18 M:1, Czas:147,288405827,
+START O:1 M:1, Czas:227,269037498,
+STOP O:1 M:1, Czas:282,368163748,
+Proces 1
+START O:17 M:6, Czas:0,
+STOP O:17 M:6, Czas:6,559334019,
+START O:2 M:0, Czas:72,692747905,
+STOP O:2 M:0, Czas:136,108395005,
+START O:16 M:1, Czas:149,619140313,
+STOP O:16 M:1, Czas:160,346090933,
+START O:3 M:0, Czas:226,335612823,
+STOP O:3 M:0, Czas:316,538549173,
+Proces 2
+START O:15 M:1, Czas:26,730233929,
+STOP O:15 M:1, Czas:47,810433769,
+START O:4 M:1, Czas:91,54486575899999,
+STOP O:4 M:1, Czas:140,082652629,
+START O:14 M:0, Czas:142,64745075000002,
+STOP O:14 M:0, Czas:224,350685,
+START O:5 M:0, Czas:453,134664741,
+STOP O:5 M:0, Czas:479,681287191,
+Proces 3
+START O:13 M:1, Czas:0,
+STOP O:13 M:1, Czas:22,30092538,
+START O:6 M:1, Czas:286,826146248,
+STOP O:6 M:1, Czas:317,897398728,
+START O:12 M:0, Czas:320,784582351,
+STOP O:12 M:0, Czas:368,783193591,
+START O:7 M:0, Czas:483,865591392,
+STOP O:7 M:0, Czas:491,715868844,
+Proces 4
+START O:11 M:1, Czas:48,802237276999996,
+STOP O:11 M:1, Czas:90,934633627,
+START O:8 M:1, Czas:162,600755042,
+STOP O:8 M:1, Czas:226,532125162,
+START O:10 M:0, Czas:370,905463032,
+STOP O:10 M:0, Czas:450,614213712,
+START O:9 M:0, Czas:495,132583892,
+STOP O:9 M:0, Czas:504,792342123,

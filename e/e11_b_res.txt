@@ -1,0 +1,55 @@
+Wyniki rozwiązania testu o kryptonimie: e11
+Ilość zaburzeń procesów: 0
+Ilość przypadków zbyt wielu pauz: 0
+Czas przekaczający maksymalny czas pauz: 0
+Całkowity czas produkcji: 435,4827945420001
+Różnica czasu ukończenia procesów z wyzszym priorytetem i niższym (nieuwzględnienie priorytetów): 0
+Czas wykraczający poza maksymalną długość okna czasowego: 0
+Ilość nieotrzymanych materiałów: 0
+
+Struktura najlepszej kombinacji:
+Proces 0
+START O:19 M:5, Czas:0,
+STOP O:19 M:5, Czas:25,29969438,
+START O:0 M:1, Czas:29,388774215999998,
+STOP O:0 M:1, Czas:106,82362698600001,
+START O:18 M:1, Czas:115,35782313700001,
+STOP O:18 M:1, Czas:167,42058510700002,
+START O:1 M:0, Czas:246,075148685,
+STOP O:1 M:0, Czas:301,17427493499997,
+Proces 1
+START O:17 M:2, Czas:0,
+STOP O:17 M:2, Czas:88,87423748,
+START O:2 M:2, Czas:123,546917418,
+STOP O:2 M:2, Czas:189,377702918,
+START O:16 M:0, Czas:301,696651833,
+STOP O:16 M:0, Czas:312,423602453,
+START O:3 M:0, Czas:319,904903655,
+STOP O:3 M:0, Czas:410,107840005,
+Proces 2
+START O:15 M:0, Czas:0,
+STOP O:15 M:0, Czas:54,27203628,
+START O:4 M:0, Czas:59,861056147,
+STOP O:4 M:0, Czas:153,30258645700002,
+START O:14 M:0, Czas:161,281897162,
+STOP O:14 M:0, Czas:242,985131412,
+START O:5 M:1, Czas:342,31412128700003,
+STOP O:5 M:1, Czas:368,860743737,
+Proces 3
+START O:13 M:1, Czas:0,
+STOP O:13 M:1, Czas:22,30092538,
+START O:6 M:2, Czas:97,047737556,
+STOP O:6 M:2, Czas:121,842279476,
+START O:12 M:1, Czas:288,596789966,
+STOP O:12 M:1, Czas:336,595401206,
+START O:7 M:0, Czas:427,6325170900001,
+STOP O:7 M:0, Czas:435,4827945420001,
+Proces 4
+START O:11 M:1, Czas:170,23311304100002,
+STOP O:11 M:1, Czas:212,36550939100002,
+START O:8 M:1, Czas:218,45190456400002,
+STOP O:8 M:1, Czas:282,383274684,
+START O:10 M:1, Czas:369,206457517,
+STOP O:10 M:1, Czas:406,532883307,
+START O:9 M:0, Czas:411,57517438900004,
+STOP O:9 M:0, Czas:421,23493262000005,

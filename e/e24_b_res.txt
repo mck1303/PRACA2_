@@ -1,0 +1,55 @@
+Wyniki rozwiązania testu o kryptonimie: e24
+Ilość zaburzeń procesów: 0
+Ilość przypadków zbyt wielu pauz: 0
+Czas przekaczający maksymalny czas pauz: 0
+Całkowity czas produkcji: 392,50089078200006
+Różnica czasu ukończenia procesów z wyzszym priorytetem i niższym (nieuwzględnienie priorytetów): 154,88109081299996
+Czas wykraczający poza maksymalną długość okna czasowego: 0
+Ilość nieotrzymanych materiałów: 0
+
+Struktura najlepszej kombinacji:
+Proces 0
+START O:19 M:8, Czas:0,
+STOP O:19 M:8, Czas:98,26516532,
+START O:0 M:7, Czas:121,018347849,
+STOP O:0 M:7, Czas:130,688269199,
+START O:18 M:1, Czas:154,208475242,
+STOP O:18 M:1, Czas:206,271237212,
+START O:1 M:2, Czas:206,91717160299999,
+STOP O:1 M:2, Czas:237,445921763,
+Proces 1
+START O:17 M:5, Czas:0,
+STOP O:17 M:5, Czas:4,924905342,
+START O:2 M:6, Czas:4,924905342,
+STOP O:2 M:6, Czas:47,296090272,
+START O:16 M:6, Czas:54,642898517,
+STOP O:16 M:6, Czas:88,075305627,
+START O:3 M:8, Czas:103,86237174,
+STOP O:3 M:8, Czas:194,72506546,
+Proces 2
+START O:15 M:6, Czas:94,09455567500001,
+STOP O:15 M:6, Czas:133,697409985,
+START O:4 M:6, Czas:137,4412006,
+STOP O:4 M:6, Czas:148,91826979,
+START O:14 M:2, Czas:246,482428401,
+STOP O:14 M:2, Czas:255,142442975,
+START O:5 M:6, Czas:270,899849477,
+STOP O:5 M:6, Czas:325,968324367,
+Proces 3
+START O:13 M:9, Czas:231,13674243000003,
+STOP O:13 M:9, Czas:277,70602187000003,
+START O:6 M:9, Czas:281,245600222,
+STOP O:6 M:9, Czas:289,889271584,
+START O:12 M:7, Czas:292,58278369300007,
+STOP O:12 M:7, Czas:356,98918028300005,
+START O:7 M:7, Czas:364,20835840200004,
+STOP O:7 M:7, Czas:392,50089078200006,
+Proces 4
+START O:11 M:2, Czas:0,
+START O:8 M:7, Czas:91,8583142,
+STOP O:11 M:2, Czas:91,8583142,
+START O:10 M:1, Czas:116,25396923,
+STOP O:8 M:7, Czas:116,25396923,
+START O:9 M:9, Czas:153,58039502,
+STOP O:10 M:1, Czas:153,58039502,
+STOP O:9 M:9, Czas:225,62700581,
