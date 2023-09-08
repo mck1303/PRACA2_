@@ -1,0 +1,21 @@
+Wyniki rozwiązania testu o kryptonimie: a41
+Ilość zaburzeń procesów: 0
+Ilość przypadków zbyt wielu pauz: 0
+Czas przekaczający maksymalny czas pauz: 0
+Całkowity czas produkcji: 29
+Różnica czasu ukończenia procesów z wyzszym priorytetem i niższym (nieuwzględnienie priorytetów): 0
+Czas wykraczający poza maksymalną długość okna czasowego: 0
+Ilość nieotrzymanych materiałów: 0
+
+Struktura najlepszej kombinacji:
+Proces 0
+START O:4 M:0, Czas:0,
+STOP O:4 M:0, Czas:5,
+START O:0 M:0, Czas:6,
+STOP O:0 M:0, Czas:11,
+START O:1 M:0, Czas:12,
+STOP O:1 M:0, Czas:17,
+START O:3 M:0, Czas:18,
+STOP O:3 M:0, Czas:23,
+START O:2 M:0, Czas:24,
+STOP O:2 M:0, Czas:29,
