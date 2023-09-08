@@ -1,0 +1,55 @@
+Wyniki rozwiązania testu o kryptonimie: d31
+Ilość zaburzeń procesów: 0
+Ilość przypadków zbyt wielu pauz: 0
+Czas przekaczający maksymalny czas pauz: 0
+Całkowity czas produkcji: 170,51322176099998
+Różnica czasu ukończenia procesów z wyzszym priorytetem i niższym (nieuwzględnienie priorytetów): 0
+Czas wykraczający poza maksymalną długość okna czasowego: 0
+Ilość nieotrzymanych materiałów: 0
+
+Struktura najlepszej kombinacji:
+Proces 0
+START O:19 M:0, Czas:0,
+STOP O:19 M:0, Czas:25,29969438,
+START O:0 M:0, Czas:28,924772427999997,
+STOP O:0 M:0, Czas:65,739266318,
+START O:18 M:0, Czas:70,147455128,
+STOP O:18 M:0, Czas:76,61088587200001,
+START O:1 M:0, Czas:80,80642572100001,
+STOP O:1 M:0, Czas:135,90555197100002,
+Proces 1
+START O:17 M:1, Czas:0,
+START O:2 M:9, Czas:26,77684159,
+STOP O:17 M:1, Czas:26,77684159,
+START O:16 M:2, Czas:59,6403885,
+STOP O:2 M:9, Czas:59,6403885,
+STOP O:16 M:2, Czas:73,12573444,
+START O:3 M:2, Czas:73,194459967,
+STOP O:3 M:2, Czas:163,842634487,
+Proces 2
+START O:15 M:5, Czas:0,
+START O:4 M:4, Czas:90,47383888,
+STOP O:15 M:5, Czas:90,47383888,
+STOP O:4 M:4, Czas:122,30613439000001,
+START O:14 M:5, Czas:122,957892783,
+STOP O:14 M:5, Czas:129,35939614900002,
+START O:5 M:3, Czas:136,44808096,
+STOP O:5 M:3, Czas:158,99839788,
+Proces 3
+START O:13 M:1, Czas:28,816427264,
+STOP O:13 M:1, Czas:51,117352644,
+START O:6 M:1, Czas:53,815412729,
+STOP O:6 M:1, Czas:84,886665209,
+START O:12 M:8, Czas:87,674336703,
+STOP O:12 M:8, Czas:98,506981633,
+START O:7 M:4, Czas:128,628389649,
+STOP O:7 M:4, Czas:159,445457169,
+Proces 4
+START O:11 M:8, Czas:0,
+STOP O:11 M:8, Czas:68,61940247,
+START O:8 M:3, Czas:68,61940247,
+START O:10 M:6, Czas:107,16104693,
+STOP O:8 M:3, Czas:107,16104693,
+STOP O:10 M:6, Czas:160,80309261,
+START O:9 M:7, Czas:160,80309261,
+STOP O:9 M:7, Czas:170,51322176099998,

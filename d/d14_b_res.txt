@@ -1,0 +1,55 @@
+Wyniki rozwiązania testu o kryptonimie: d14
+Ilość zaburzeń procesów: 0
+Ilość przypadków zbyt wielu pauz: 0
+Czas przekaczający maksymalny czas pauz: 0
+Całkowity czas produkcji: 306,27988924000005
+Różnica czasu ukończenia procesów z wyzszym priorytetem i niższym (nieuwzględnienie priorytetów): 0
+Czas wykraczający poza maksymalną długość okna czasowego: 0
+Ilość nieotrzymanych materiałów: 0
+
+Struktura najlepszej kombinacji:
+Proces 0
+START O:19 M:0, Czas:0,
+STOP O:19 M:0, Czas:25,29969438,
+START O:0 M:1, Czas:28,590642834,
+STOP O:0 M:1, Czas:106,02549560400001,
+START O:18 M:1, Czas:114,55969175500002,
+STOP O:18 M:1, Czas:166,622453725,
+START O:1 M:1, Czas:175,253594173,
+STOP O:1 M:1, Czas:179,5243422,
+Proces 1
+START O:17 M:1, Czas:0,
+STOP O:17 M:1, Czas:26,77684159,
+START O:2 M:0, Czas:30,534041447999996,
+STOP O:2 M:0, Czas:93,949688548,
+START O:16 M:4, Czas:112,112835758,
+STOP O:16 M:4, Czas:122,839786378,
+START O:3 M:0, Czas:189,70265691900002,
+STOP O:3 M:0, Czas:279,905593269,
+Proces 2
+START O:15 M:4, Czas:0,
+STOP O:15 M:4, Czas:73,35891451,
+START O:4 M:4, Czas:77,52675843700001,
+STOP O:4 M:4, Czas:109,359053947,
+START O:14 M:4, Czas:126,772789426,
+STOP O:14 M:4, Czas:209,60364736600002,
+START O:5 M:4, Czas:218,20388333600002,
+STOP O:5 M:4, Czas:219,65065662,
+Proces 3
+START O:13 M:6, Czas:0,
+STOP O:13 M:6, Czas:9,17063634,
+START O:6 M:0, Czas:103,399003511,
+STOP O:6 M:0, Czas:128,19354543100002,
+START O:12 M:0, Czas:133,58554759300003,
+STOP O:12 M:0, Czas:181,58415883300003,
+START O:7 M:0, Czas:285,353138509,
+STOP O:7 M:0, Czas:293,203415961,
+Proces 4
+START O:11 M:2, Czas:0,
+STOP O:11 M:2, Czas:91,8583142,
+START O:8 M:1, Czas:187,891078265,
+STOP O:8 M:1, Czas:251,822448385,
+START O:10 M:1, Czas:252,155532559,
+STOP O:10 M:1, Czas:289,481958349,
+START O:9 M:0, Czas:296,62013100900003,
+STOP O:9 M:0, Czas:306,27988924000005,

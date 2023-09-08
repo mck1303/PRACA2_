@@ -1,0 +1,55 @@
+Wyniki rozwiązania testu o kryptonimie: d24
+Ilość zaburzeń procesów: 0
+Ilość przypadków zbyt wielu pauz: 0
+Czas przekaczający maksymalny czas pauz: 0
+Całkowity czas produkcji: 440,81902705300007
+Różnica czasu ukończenia procesów z wyzszym priorytetem i niższym (nieuwzględnienie priorytetów): 0
+Czas wykraczający poza maksymalną długość okna czasowego: 0
+Ilość nieotrzymanych materiałów: 0
+
+Struktura najlepszej kombinacji:
+Proces 0
+START O:19 M:2, Czas:0,
+STOP O:19 M:2, Czas:27,16448184,
+START O:0 M:2, Czas:30,323473482,
+STOP O:0 M:2, Czas:69,52999384199998,
+START O:18 M:0, Czas:153,38032324800002,
+STOP O:18 M:0, Czas:159,84375399200002,
+START O:1 M:1, Czas:241,676058928,
+STOP O:1 M:1, Czas:245,946806955,
+Proces 1
+START O:17 M:1, Czas:168,59860146,
+STOP O:17 M:1, Czas:195,37544305,
+START O:2 M:0, Czas:250,753461149,
+STOP O:2 M:0, Czas:314,16910824900003,
+START O:16 M:1, Czas:315,42742035699996,
+STOP O:16 M:1, Czas:326,154370977,
+START O:3 M:0, Czas:350,61609070300005,
+STOP O:3 M:0, Czas:440,81902705300007,
+Proces 2
+START O:15 M:0, Czas:0,
+STOP O:15 M:0, Czas:54,27203628,
+START O:4 M:0, Czas:59,861056147,
+STOP O:4 M:0, Czas:153,30258645700002,
+START O:14 M:0, Czas:162,40721482600003,
+STOP O:14 M:0, Czas:244,110449076,
+START O:5 M:0, Czas:320,51041780500003,
+STOP O:5 M:0, Czas:347,05704025500006,
+Proces 3
+START O:13 M:1, Czas:45,652606069,
+STOP O:13 M:1, Czas:67,953531449,
+START O:6 M:1, Czas:135,519720528,
+STOP O:6 M:1, Czas:166,590973008,
+START O:12 M:1, Czas:254,15937571199999,
+STOP O:12 M:1, Czas:307,56836130199997,
+START O:7 M:1, Czas:326,693969531,
+STOP O:7 M:1, Czas:401,251475751,
+Proces 4
+START O:11 M:1, Czas:0,
+STOP O:11 M:1, Czas:42,13239635,
+START O:8 M:1, Czas:71,221068739,
+STOP O:8 M:1, Czas:135,152438859,
+START O:10 M:1, Czas:197,081511847,
+STOP O:10 M:1, Czas:234,407937637,
+START O:9 M:1, Czas:405,960529682,
+STOP O:9 M:1, Czas:440,353663272,

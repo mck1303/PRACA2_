@@ -1,0 +1,55 @@
+Wyniki rozwiązania testu o kryptonimie: d26
+Ilość zaburzeń procesów: 0
+Ilość przypadków zbyt wielu pauz: 0
+Czas przekaczający maksymalny czas pauz: 0
+Całkowity czas produkcji: 411,381679897
+Różnica czasu ukończenia procesów z wyzszym priorytetem i niższym (nieuwzględnienie priorytetów): 0
+Czas wykraczający poza maksymalną długość okna czasowego: 0
+Ilość nieotrzymanych materiałów: 0
+
+Struktura najlepszej kombinacji:
+Proces 0
+START O:19 M:1, Czas:0,
+STOP O:19 M:1, Czas:56,69566543,
+START O:0 M:3, Czas:84,49048024000001,
+STOP O:0 M:3, Czas:157,93223069,
+START O:18 M:0, Czas:231,35751651700002,
+STOP O:18 M:0, Czas:257,520568629,
+START O:1 M:1, Czas:296,50071048,
+STOP O:1 M:1, Czas:300,77145850700003,
+Proces 1
+START O:17 M:4, Czas:0,
+STOP O:17 M:4, Czas:6,559334019,
+START O:2 M:0, Czas:109,812285126,
+STOP O:2 M:0, Czas:192,92755359400002,
+START O:16 M:0, Czas:197,468779616,
+STOP O:16 M:0, Czas:227,895351604,
+START O:3 M:0, Czas:262,729507364,
+STOP O:3 M:0, Czas:372,63206508200005,
+Proces 2
+START O:15 M:0, Czas:24,099343333,
+STOP O:15 M:0, Czas:78,371379613,
+START O:4 M:1, Czas:172,020591704,
+STOP O:4 M:1, Czas:220,558378574,
+START O:14 M:1, Czas:221,46058574399999,
+STOP O:14 M:1, Czas:293,706326654,
+START O:5 M:1, Czas:303,20197497000004,
+STOP O:5 M:1, Czas:318,88533797,
+Proces 3
+START O:13 M:3, Czas:0,
+STOP O:13 M:3, Czas:78,88297608,
+START O:6 M:0, Czas:84,213363563,
+STOP O:6 M:0, Czas:109,007905483,
+START O:12 M:3, Czas:165,167182131,
+STOP O:12 M:3, Czas:333,13334425100004,
+START O:7 M:3, Czas:335,25590231700005,
+STOP O:7 M:3, Czas:411,381679897,
+Proces 4
+START O:11 M:0, Czas:0,
+STOP O:11 M:0, Czas:16,38885996,
+START O:8 M:1, Czas:62,49412431,
+STOP O:8 M:1, Czas:126,42549442999999,
+START O:10 M:1, Czas:126,758578604,
+STOP O:10 M:1, Czas:164,085004394,
+START O:9 M:0, Czas:374,0993994660001,
+STOP O:9 M:0, Czas:406,0722841053765,

@@ -1,0 +1,55 @@
+Wyniki rozwiązania testu o kryptonimie: d23
+Ilość zaburzeń procesów: 0
+Ilość przypadków zbyt wielu pauz: 0
+Czas przekaczający maksymalny czas pauz: 0
+Całkowity czas produkcji: 385,40057159699995
+Różnica czasu ukończenia procesów z wyzszym priorytetem i niższym (nieuwzględnienie priorytetów): 44,23990023799996
+Czas wykraczający poza maksymalną długość okna czasowego: 0
+Ilość nieotrzymanych materiałów: 0
+
+Struktura najlepszej kombinacji:
+Proces 0
+START O:19 M:5, Czas:0,
+START O:0 M:0, Czas:24,41876376,
+STOP O:19 M:5, Czas:24,41876376,
+START O:18 M:8, Czas:61,23325765,
+STOP O:0 M:0, Czas:61,23325765,
+STOP O:18 M:8, Czas:136,40495837999998,
+START O:1 M:0, Czas:145,80923322499999,
+STOP O:1 M:0, Czas:200,908359475,
+Proces 1
+START O:17 M:2, Czas:0,
+STOP O:17 M:2, Czas:88,87423748,
+START O:2 M:9, Czas:88,87423748,
+STOP O:2 M:9, Czas:121,73778439,
+START O:16 M:2, Czas:124,602717604,
+STOP O:16 M:2, Czas:138,088063544,
+START O:3 M:5, Czas:140,393250427,
+STOP O:3 M:5, Czas:174,579164477,
+Proces 2
+START O:15 M:4, Czas:174,873782257,
+STOP O:15 M:4, Czas:248,232696767,
+START O:4 M:6, Czas:250,272085763,
+STOP O:4 M:6, Czas:261,749154953,
+START O:14 M:5, Czas:264,08866334100003,
+STOP O:14 M:5, Czas:270,490166707,
+START O:5 M:6, Czas:277,108737164,
+STOP O:5 M:6, Czas:332,177212054,
+Proces 3
+START O:13 M:6, Czas:0,
+STOP O:13 M:6, Czas:91,26879601,
+START O:6 M:4, Czas:91,26879601,
+STOP O:6 M:4, Czas:168,08646564,
+START O:12 M:7, Czas:168,08646564,
+STOP O:12 M:7, Czas:232,49286223000001,
+START O:7 M:8, Czas:239,255420334,
+STOP O:7 M:8, Czas:314,266506814,
+Proces 4
+START O:11 M:7, Czas:239,807355136,
+STOP O:11 M:7, Czas:279,861405376,
+START O:8 M:2, Czas:281,834395299,
+STOP O:8 M:2, Czas:332,631272679,
+START O:10 M:2, Czas:335,947117259,
+STOP O:10 M:2, Czas:372,113793469,
+START O:9 M:2, Czas:373,00297561699995,
+STOP O:9 M:2, Czas:385,40057159699995,

@@ -1,0 +1,55 @@
+Wyniki rozwiązania testu o kryptonimie: d27
+Ilość zaburzeń procesów: 0
+Ilość przypadków zbyt wielu pauz: 0
+Czas przekaczający maksymalny czas pauz: 0
+Całkowity czas produkcji: 521,825670287
+Różnica czasu ukończenia procesów z wyzszym priorytetem i niższym (nieuwzględnienie priorytetów): 0
+Czas wykraczający poza maksymalną długość okna czasowego: 0
+Ilość nieotrzymanych materiałów: 0
+
+Struktura najlepszej kombinacji:
+Proces 0
+START O:19 M:0, Czas:0,
+STOP O:19 M:0, Czas:25,29969438,
+START O:0 M:0, Czas:28,924772427999997,
+STOP O:0 M:0, Czas:65,739266318,
+START O:18 M:0, Czas:98,88349903800001,
+STOP O:18 M:0, Czas:105,34692978200002,
+START O:1 M:2, Czas:111,73041004299999,
+STOP O:1 M:2, Czas:116,00115806999999,
+Proces 1
+START O:17 M:0, Czas:66,34131836600001,
+STOP O:17 M:0, Czas:72,90065238500001,
+START O:2 M:1, Czas:239,938798418,
+STOP O:2 M:1, Czas:411,37455993900005,
+START O:16 M:1, Czas:417,51783985400004,
+STOP O:16 M:1, Czas:431,00318579400005,
+START O:3 M:2, Czas:431,177495767,
+STOP O:3 M:2, Czas:521,825670287,
+Proces 2
+START O:15 M:1, Czas:0,
+STOP O:15 M:1, Czas:92,57832714,
+START O:4 M:1, Czas:98,04299448,
+STOP O:4 M:1, Czas:146,58078135,
+START O:14 M:1, Czas:147,48298852,
+STOP O:14 M:1, Czas:219,72872943,
+START O:5 M:1, Czas:221,618786836,
+STOP O:5 M:1, Czas:237,302149836,
+Proces 3
+START O:13 M:0, Czas:80,35912045600001,
+STOP O:13 M:0, Czas:89,52975679600002,
+START O:6 M:2, Czas:93,473576584,
+STOP O:6 M:2, Czas:109,914014864,
+START O:12 M:2, Czas:118,57495811899999,
+STOP O:12 M:2, Czas:327,509705542,
+START O:7 M:2, Czas:330,940870602,
+STOP O:7 M:2, Czas:424,423534662,
+Proces 4
+START O:11 M:2, Czas:0,
+STOP O:11 M:2, Czas:91,8583142,
+START O:8 M:0, Czas:112,65153201300002,
+STOP O:8 M:0, Czas:217,91094814300004,
+START O:10 M:0, Czas:227,41719597200003,
+STOP O:10 M:0, Czas:307,12594665200004,
+START O:9 M:1, Czas:437,90084564800003,
+STOP O:9 M:1, Czas:472,293979238,

@@ -1,0 +1,55 @@
+Wyniki rozwiązania testu o kryptonimie: d20
+Ilość zaburzeń procesów: 0
+Ilość przypadków zbyt wielu pauz: 0
+Czas przekaczający maksymalny czas pauz: 0
+Całkowity czas produkcji: 300,58946462500006
+Różnica czasu ukończenia procesów z wyzszym priorytetem i niższym (nieuwzględnienie priorytetów): 0
+Czas wykraczający poza maksymalną długość okna czasowego: 0
+Ilość nieotrzymanych materiałów: 0
+
+Struktura najlepszej kombinacji:
+Proces 0
+START O:19 M:5, Czas:0,
+STOP O:19 M:5, Czas:24,41876376,
+START O:0 M:4, Czas:24,41876376,
+START O:18 M:6, Czas:87,14088281000001,
+STOP O:0 M:4, Czas:87,14088281000001,
+STOP O:18 M:6, Czas:163,72066579,
+START O:1 M:6, Czas:169,791330147,
+STOP O:1 M:6, Czas:196,34669979699999,
+Proces 1
+START O:17 M:7, Czas:94,134434155,
+STOP O:17 M:7, Czas:189,661414765,
+START O:2 M:7, Czas:193,58694226699998,
+STOP O:2 M:7, Czas:205,25697986699998,
+START O:16 M:3, Czas:217,173652354,
+STOP O:16 M:3, Czas:276,44228406400003,
+START O:3 M:6, Czas:277,576620794,
+STOP O:3 M:6, Czas:288,876824944,
+Proces 2
+START O:15 M:1, Czas:0,
+START O:4 M:3, Czas:92,57832714,
+STOP O:15 M:1, Czas:92,57832714,
+STOP O:4 M:3, Czas:175,33325691,
+START O:14 M:2, Czas:183,796445616,
+STOP O:14 M:2, Czas:192,45646019,
+START O:5 M:3, Czas:193,277993995,
+STOP O:5 M:3, Czas:215,828310915,
+Proces 3
+START O:13 M:4, Czas:95,807487694,
+STOP O:13 M:4, Czas:187,423509994,
+START O:6 M:8, Czas:224,051088118,
+STOP O:6 M:8, Czas:258,150183928,
+START O:12 M:8, Czas:259,187960398,
+STOP O:12 M:8, Czas:270,020605328,
+START O:7 M:7, Czas:272,29693224500005,
+STOP O:7 M:7, Czas:300,58946462500006,
+Proces 4
+START O:11 M:8, Czas:0,
+STOP O:11 M:8, Czas:68,61940247,
+START O:8 M:7, Czas:68,61940247,
+STOP O:8 M:7, Czas:93,0150575,
+START O:10 M:2, Czas:93,0150575,
+STOP O:10 M:2, Czas:129,18173371,
+START O:9 M:8, Czas:132,89119588,
+STOP O:9 M:8, Czas:222,92955833,

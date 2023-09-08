@@ -1,0 +1,55 @@
+Wyniki rozwiązania testu o kryptonimie: d21
+Ilość zaburzeń procesów: 0
+Ilość przypadków zbyt wielu pauz: 0
+Czas przekaczający maksymalny czas pauz: 0
+Całkowity czas produkcji: 364,246546035
+Różnica czasu ukończenia procesów z wyzszym priorytetem i niższym (nieuwzględnienie priorytetów): 109,92291418500011
+Czas wykraczający poza maksymalną długość okna czasowego: 0
+Ilość nieotrzymanych materiałów: 0
+
+Struktura najlepszej kombinacji:
+Proces 0
+START O:19 M:9, Czas:0,
+STOP O:19 M:9, Czas:29,64552487,
+START O:0 M:5, Czas:166,56568160299997,
+STOP O:0 M:5, Czas:173,76508213699998,
+START O:18 M:9, Czas:174,723362514,
+STOP O:18 M:9, Czas:192,702233544,
+START O:1 M:1, Czas:242,90801007600004,
+STOP O:1 M:1, Czas:247,17875810300004,
+Proces 1
+START O:17 M:3, Czas:26,102606306,
+STOP O:17 M:3, Czas:88,227354296,
+START O:2 M:2, Czas:99,513743471,
+STOP O:2 M:2, Czas:165,344528971,
+START O:16 M:0, Czas:242,53753517099997,
+STOP O:16 M:0, Czas:253,26448579099997,
+START O:3 M:0, Czas:260,74578699299997,
+STOP O:3 M:0, Czas:350,948723343,
+Proces 2
+START O:15 M:3, Czas:0,
+START O:4 M:6, Czas:21,08019984,
+STOP O:15 M:3, Czas:21,08019984,
+STOP O:4 M:6, Czas:32,55726903,
+START O:14 M:1, Czas:32,55726903,
+START O:5 M:8, Czas:104,80300994,
+STOP O:14 M:1, Czas:104,80300994,
+STOP O:5 M:8, Czas:137,41706915,
+Proces 3
+START O:13 M:1, Czas:113,837718873,
+STOP O:13 M:1, Czas:136,138644253,
+START O:6 M:8, Czas:147,097881605,
+STOP O:6 M:8, Czas:181,196977415,
+START O:12 M:1, Czas:181,66008058100002,
+STOP O:12 M:1, Czas:235,06906617100003,
+START O:7 M:0, Czas:356,396268583,
+STOP O:7 M:0, Czas:364,246546035,
+Proces 4
+START O:11 M:2, Czas:0,
+STOP O:11 M:2, Czas:91,8583142,
+START O:8 M:5, Czas:91,8583142,
+STOP O:8 M:5, Czas:157,59865304,
+START O:10 M:0, Czas:157,59865304,
+STOP O:10 M:0, Czas:237,30740371999997,
+START O:9 M:7, Czas:237,30740371999997,
+STOP O:9 M:7, Czas:247,01753287099996,

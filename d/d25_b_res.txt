@@ -1,0 +1,55 @@
+Wyniki rozwiązania testu o kryptonimie: d25
+Ilość zaburzeń procesów: 0
+Ilość przypadków zbyt wielu pauz: 0
+Czas przekaczający maksymalny czas pauz: 0
+Całkowity czas produkcji: 324,1992111320001
+Różnica czasu ukończenia procesów z wyzszym priorytetem i niższym (nieuwzględnienie priorytetów): 115,53987925600012
+Czas wykraczający poza maksymalną długość okna czasowego: 0
+Ilość nieotrzymanych materiałów: 0
+
+Struktura najlepszej kombinacji:
+Proces 0
+START O:19 M:9, Czas:0,
+STOP O:19 M:9, Czas:29,64552487,
+START O:0 M:6, Czas:29,64552487,
+STOP O:0 M:6, Czas:120,89408045,
+START O:18 M:3, Czas:171,31603928700002,
+STOP O:18 M:3, Czas:222,28066104700002,
+START O:1 M:3, Czas:223,91400673300004,
+STOP O:1 M:3, Czas:298,64589138300005,
+Proces 1
+START O:17 M:2, Czas:0,
+START O:2 M:8, Czas:88,87423748,
+STOP O:17 M:2, Czas:88,87423748,
+START O:16 M:3, Czas:108,52040254,
+STOP O:2 M:8, Czas:108,52040254,
+START O:3 M:0, Czas:167,78903425000001,
+STOP O:16 M:3, Czas:167,78903425000001,
+STOP O:3 M:0, Czas:257,9919706,
+Proces 2
+START O:15 M:5, Czas:0,
+STOP O:15 M:5, Czas:90,47383888,
+START O:4 M:4, Czas:90,47383888,
+STOP O:4 M:4, Czas:122,30613439000001,
+START O:14 M:7, Czas:122,30613439000001,
+START O:5 M:1, Czas:221,83775126,
+STOP O:14 M:7, Czas:221,83775126,
+STOP O:5 M:1, Czas:237,52111426,
+Proces 3
+START O:13 M:5, Czas:95,96019395100001,
+STOP O:13 M:5, Czas:120,30320864100001,
+START O:6 M:5, Czas:128,527811301,
+STOP O:6 M:5, Czas:130,55358196600002,
+START O:12 M:5, Czas:132,81248438900002,
+STOP O:12 M:5, Czas:231,38727047900002,
+START O:7 M:5, Czas:239,944769943,
+STOP O:7 M:5, Czas:284,88471003300003,
+Proces 4
+START O:11 M:9, Czas:33,076482903,
+STOP O:11 M:9, Czas:99,961419193,
+START O:8 M:4, Czas:128,29051961500002,
+STOP O:8 M:4, Czas:173,88468644500003,
+START O:10 M:7, Czas:223,966841157,
+STOP O:10 M:7, Czas:228,42125296400002,
+START O:9 M:3, Czas:298,78176094200006,
+STOP O:9 M:3, Czas:324,1992111320001,

@@ -1,0 +1,55 @@
+Wyniki rozwiązania testu o kryptonimie: d47
+Ilość zaburzeń procesów: 0
+Ilość przypadków zbyt wielu pauz: 0
+Czas przekaczający maksymalny czas pauz: 0
+Całkowity czas produkcji: 241,06562173100002
+Różnica czasu ukończenia procesów z wyzszym priorytetem i niższym (nieuwzględnienie priorytetów): 0
+Czas wykraczający poza maksymalną długość okna czasowego: 0
+Ilość nieotrzymanych materiałów: 0
+
+Struktura najlepszej kombinacji:
+Proces 0
+START O:19 M:5, Czas:0,
+START O:0 M:4, Czas:24,41876376,
+STOP O:19 M:5, Czas:24,41876376,
+STOP O:0 M:4, Czas:87,14088281000001,
+START O:18 M:2, Czas:87,14088281000001,
+STOP O:18 M:2, Czas:131,19802525,
+START O:1 M:6, Czas:131,19802525,
+STOP O:1 M:6, Czas:157,7533949,
+Proces 1
+START O:17 M:5, Czas:33,952612563,
+STOP O:17 M:5, Czas:38,877517905000005,
+START O:2 M:1, Czas:57,362989852999995,
+STOP O:2 M:1, Czas:98,966101713,
+START O:16 M:5, Czas:113,983197065,
+STOP O:16 M:5, Czas:168,824970375,
+START O:3 M:5, Czas:175,346919085,
+STOP O:3 M:5, Czas:209,532833135,
+Proces 2
+START O:15 M:0, Czas:0,
+START O:4 M:9, Czas:54,27203628,
+STOP O:15 M:0, Czas:54,27203628,
+STOP O:4 M:9, Czas:113,88242914,
+START O:14 M:0, Czas:118,48874807,
+STOP O:14 M:0, Czas:200,19198232,
+START O:5 M:0, Czas:206,100972071,
+STOP O:5 M:0, Czas:232,647594521,
+Proces 3
+START O:13 M:1, Czas:0,
+STOP O:13 M:1, Czas:22,30092538,
+START O:6 M:1, Czas:24,998985464999997,
+STOP O:6 M:1, Czas:56,070237944999995,
+START O:12 M:9, Czas:115,02664145199999,
+STOP O:12 M:9, Czas:148,708385532,
+START O:7 M:6, Czas:161,52523432499999,
+STOP O:7 M:6, Czas:239,47731937499998,
+Proces 4
+START O:11 M:7, Czas:0,
+STOP O:11 M:7, Czas:40,05405024,
+START O:8 M:2, Czas:137,499445433,
+STOP O:8 M:2, Czas:188,29632281300002,
+START O:10 M:2, Czas:191,61216739300002,
+STOP O:10 M:2, Czas:227,778843603,
+START O:9 M:2, Czas:228,66802575100002,
+STOP O:9 M:2, Czas:241,06562173100002,

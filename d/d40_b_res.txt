@@ -1,0 +1,55 @@
+Wyniki rozwiązania testu o kryptonimie: d40
+Ilość zaburzeń procesów: 0
+Ilość przypadków zbyt wielu pauz: 0
+Czas przekaczający maksymalny czas pauz: 0
+Całkowity czas produkcji: 198,81011502899997
+Różnica czasu ukończenia procesów z wyzszym priorytetem i niższym (nieuwzględnienie priorytetów): 0
+Czas wykraczający poza maksymalną długość okna czasowego: 0
+Ilość nieotrzymanych materiałów: 0
+
+Struktura najlepszej kombinacji:
+Proces 0
+START O:19 M:0, Czas:0,
+STOP O:19 M:0, Czas:25,29969438,
+START O:0 M:0, Czas:28,924772427999997,
+STOP O:0 M:0, Czas:65,739266318,
+START O:18 M:0, Czas:70,147455128,
+STOP O:18 M:0, Czas:76,61088587200001,
+START O:1 M:0, Czas:80,80642572100001,
+STOP O:1 M:0, Czas:135,90555197100002,
+Proces 1
+START O:17 M:5, Czas:0,
+START O:2 M:6, Czas:4,924905342,
+STOP O:17 M:5, Czas:4,924905342,
+STOP O:2 M:6, Czas:47,296090272,
+START O:16 M:6, Czas:54,642898517,
+STOP O:16 M:6, Czas:88,075305627,
+START O:3 M:7, Czas:122,33742369800001,
+STOP O:3 M:7, Czas:187,827506438,
+Proces 2
+START O:15 M:2, Czas:0,
+STOP O:15 M:2, Czas:65,41309152,
+START O:4 M:4, Czas:65,41309152,
+STOP O:4 M:4, Czas:97,24538702999999,
+START O:14 M:4, Czas:102,31080283099999,
+STOP O:14 M:4, Czas:185,14166077099998,
+START O:5 M:4, Czas:193,74189674099998,
+STOP O:5 M:4, Czas:195,18867002499996,
+Proces 3
+START O:13 M:1, Czas:0,
+STOP O:13 M:1, Czas:22,30092538,
+START O:6 M:8, Czas:22,30092538,
+START O:12 M:7, Czas:56,400021190000004,
+STOP O:6 M:8, Czas:56,400021190000004,
+START O:7 M:3, Czas:120,80641778,
+STOP O:12 M:7, Czas:120,80641778,
+STOP O:7 M:3, Czas:196,93219536,
+Proces 4
+START O:11 M:1, Czas:25,184663719,
+STOP O:11 M:1, Czas:67,31706006900001,
+START O:8 M:2, Czas:74,085398959,
+STOP O:8 M:2, Czas:124,882276339,
+START O:10 M:1, Czas:125,51220042599999,
+STOP O:10 M:1, Czas:162,838626216,
+START O:9 M:1, Czas:164,41698143899998,
+STOP O:9 M:1, Czas:198,81011502899997,

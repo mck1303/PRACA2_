@@ -1,0 +1,55 @@
+Wyniki rozwiązania testu o kryptonimie: d49
+Ilość zaburzeń procesów: 0
+Ilość przypadków zbyt wielu pauz: 0
+Czas przekaczający maksymalny czas pauz: 0
+Całkowity czas produkcji: 181,63046771199998
+Różnica czasu ukończenia procesów z wyzszym priorytetem i niższym (nieuwzględnienie priorytetów): 0
+Czas wykraczający poza maksymalną długość okna czasowego: 0
+Ilość nieotrzymanych materiałów: 0
+
+Struktura najlepszej kombinacji:
+Proces 0
+START O:19 M:2, Czas:0,
+STOP O:19 M:2, Czas:27,16448184,
+START O:0 M:5, Czas:92,28058141799998,
+STOP O:0 M:5, Czas:99,47998195199999,
+START O:18 M:0, Czas:135,815335699,
+STOP O:18 M:0, Czas:142,278766443,
+START O:1 M:1, Czas:146,724036944,
+STOP O:1 M:1, Czas:150,994784971,
+Proces 1
+START O:17 M:1, Czas:0,
+STOP O:17 M:1, Czas:26,77684159,
+START O:2 M:4, Czas:62,370484144,
+STOP O:2 M:4, Czas:108,411301714,
+START O:16 M:4, Czas:115,738789888,
+STOP O:16 M:4, Czas:139,579917468,
+START O:3 M:4, Czas:143,206279922,
+STOP O:3 M:4, Czas:168,816339412,
+Proces 2
+START O:15 M:3, Czas:0,
+START O:4 M:4, Czas:21,08019984,
+STOP O:15 M:3, Czas:21,08019984,
+STOP O:4 M:4, Czas:52,91249535,
+START O:14 M:0, Czas:52,91249535,
+STOP O:14 M:0, Czas:134,6157296,
+START O:5 M:3, Czas:139,678544055,
+STOP O:5 M:3, Czas:162,228860975,
+Proces 3
+START O:13 M:8, Czas:0,
+START O:6 M:5, Czas:90,18117686,
+STOP O:13 M:8, Czas:90,18117686,
+STOP O:6 M:5, Czas:92,20694752499999,
+START O:12 M:8, Czas:92,25556415499999,
+STOP O:12 M:8, Czas:103,08820908499999,
+START O:7 M:8, Czas:106,619381232,
+STOP O:7 M:8, Czas:181,63046771199998,
+Proces 4
+START O:11 M:7, Czas:0,
+STOP O:11 M:7, Czas:40,05405024,
+START O:8 M:9, Czas:40,05405024,
+STOP O:8 M:9, Czas:95,59269041,
+START O:10 M:7, Czas:101,874855696,
+STOP O:10 M:7, Czas:106,329267503,
+START O:9 M:9, Czas:108,812402789,
+STOP O:9 M:9, Czas:180,85901357900002,

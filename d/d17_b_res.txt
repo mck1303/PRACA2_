@@ -1,0 +1,55 @@
+Wyniki rozwiązania testu o kryptonimie: d17
+Ilość zaburzeń procesów: 0
+Ilość przypadków zbyt wielu pauz: 0
+Czas przekaczający maksymalny czas pauz: 0
+Całkowity czas produkcji: 490,018965442
+Różnica czasu ukończenia procesów z wyzszym priorytetem i niższym (nieuwzględnienie priorytetów): 0
+Czas wykraczający poza maksymalną długość okna czasowego: 0
+Ilość nieotrzymanych materiałów: 0
+
+Struktura najlepszej kombinacji:
+Proces 0
+START O:19 M:1, Czas:0,
+STOP O:19 M:1, Czas:56,69566543,
+START O:0 M:1, Czas:62,842495349,
+STOP O:0 M:1, Czas:140,277348119,
+START O:18 M:1, Czas:148,81154427,
+STOP O:18 M:1, Czas:200,87430624,
+START O:1 M:0, Czas:216,28781851400004,
+STOP O:1 M:0, Czas:286,2606044348531,
+Proces 1
+START O:17 M:0, Czas:0,
+STOP O:17 M:0, Czas:6,559334019,
+START O:2 M:0, Czas:11,815314013999998,
+STOP O:2 M:0, Czas:75,230961114,
+START O:16 M:0, Czas:175,43472584600002,
+STOP O:16 M:0, Czas:186,16167646600002,
+START O:3 M:1, Czas:276,293318788,
+STOP O:3 M:1, Czas:375,58920260800005,
+Proces 2
+START O:15 M:6, Czas:0,
+STOP O:15 M:6, Czas:54,27203628,
+START O:4 M:0, Czas:81,858911116,
+STOP O:4 M:0, Czas:175,30044142600002,
+START O:14 M:1, Czas:201,74515474100002,
+STOP O:14 M:1, Czas:273,990895651,
+START O:5 M:0, Czas:293,63616847585314,
+STOP O:5 M:0, Czas:309,3195314758531,
+Proces 3
+START O:13 M:3, Czas:0,
+STOP O:13 M:3, Czas:9,17063634,
+START O:6 M:3, Czas:19,030407972,
+STOP O:6 M:3, Czas:50,101660452,
+START O:12 M:3, Czas:54,44612471,
+STOP O:12 M:3, Czas:108,95677795921546,
+START O:7 M:1, Czas:376,35927170100007,
+STOP O:7 M:1, Czas:450,91677792100006,
+Proces 4
+START O:11 M:3, Czas:110,52505677021546,
+STOP O:11 M:3, Czas:153,75912077943093,
+START O:8 M:0, Czas:189,97796013500002,
+STOP O:8 M:0, Czas:211,60641872500003,
+START O:10 M:0, Czas:311,4545788078531,
+STOP O:10 M:0, Czas:408,1617976831138,
+START O:9 M:1, Czas:455,62583185200003,
+STOP O:9 M:1, Czas:490,018965442,

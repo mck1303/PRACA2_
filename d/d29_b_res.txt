@@ -1,0 +1,55 @@
+Wyniki rozwiązania testu o kryptonimie: d29
+Ilość zaburzeń procesów: 0
+Ilość przypadków zbyt wielu pauz: 0
+Czas przekaczający maksymalny czas pauz: 0
+Całkowity czas produkcji: 454,82532922300004
+Różnica czasu ukończenia procesów z wyzszym priorytetem i niższym (nieuwzględnienie priorytetów): 187,36266123592372
+Czas wykraczający poza maksymalną długość okna czasowego: 0
+Ilość nieotrzymanych materiałów: 0
+
+Struktura najlepszej kombinacji:
+Proces 0
+START O:19 M:2, Czas:0,
+START O:0 M:0, Czas:27,16448184,
+STOP O:19 M:2, Czas:27,16448184,
+STOP O:0 M:0, Czas:63,97897573,
+START O:18 M:3, Czas:63,97897573,
+STOP O:18 M:3, Czas:114,94359749,
+START O:1 M:4, Czas:114,94359749,
+STOP O:1 M:4, Czas:166,10393946,
+Proces 1
+START O:17 M:7, Czas:0,
+STOP O:17 M:7, Czas:95,52698061,
+START O:2 M:8, Czas:95,52698061,
+STOP O:2 M:8, Czas:115,17314567,
+START O:16 M:7, Czas:123,019844549,
+STOP O:16 M:7, Czas:210,499047829,
+START O:3 M:8, Czas:211,329263385,
+STOP O:3 M:8, Czas:302,191957105,
+Proces 2
+START O:15 M:4, Czas:169,591684187,
+STOP O:15 M:4, Czas:242,950598697,
+START O:4 M:2, Czas:246,504621329,
+STOP O:4 M:2, Czas:328,074076399,
+START O:14 M:2, Czas:333,880757868,
+STOP O:14 M:2, Czas:342,540772442,
+START O:5 M:2, Czas:350,230768033,
+STOP O:5 M:2, Czas:446,586417513,
+Proces 3
+START O:13 M:9, Czas:0,
+START O:6 M:1, Czas:46,56927944,
+STOP O:13 M:9, Czas:46,56927944,
+START O:12 M:5, Czas:77,64053192,
+STOP O:6 M:1, Czas:77,64053192,
+STOP O:12 M:5, Czas:176,21531801,
+START O:7 M:1, Czas:184,66625005707627,
+STOP O:7 M:1, Czas:259,2237562770763,
+Proces 4
+START O:11 M:4, Czas:245,751931119,
+STOP O:11 M:4, Czas:299,645660739,
+START O:8 M:9, Czas:301,58977953600004,
+STOP O:8 M:9, Czas:357,12841970600005,
+START O:10 M:7, Czas:358,8437655110001,
+STOP O:10 M:7, Czas:363,29817731800006,
+START O:9 M:8, Czas:364,786966773,
+STOP O:9 M:8, Czas:454,82532922300004,

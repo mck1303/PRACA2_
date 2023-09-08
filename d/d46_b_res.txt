@@ -1,0 +1,55 @@
+Wyniki rozwiązania testu o kryptonimie: d46
+Ilość zaburzeń procesów: 0
+Ilość przypadków zbyt wielu pauz: 0
+Czas przekaczający maksymalny czas pauz: 0
+Całkowity czas produkcji: 156,545973025
+Różnica czasu ukończenia procesów z wyzszym priorytetem i niższym (nieuwzględnienie priorytetów): 0
+Czas wykraczający poza maksymalną długość okna czasowego: 0
+Ilość nieotrzymanych materiałów: 0
+
+Struktura najlepszej kombinacji:
+Proces 0
+START O:19 M:2, Czas:0,
+START O:0 M:9, Czas:27,16448184,
+STOP O:19 M:2, Czas:27,16448184,
+STOP O:0 M:9, Czas:28,517903119,
+START O:18 M:2, Czas:32,086747164,
+STOP O:18 M:2, Czas:76,14388960400001,
+START O:1 M:2, Czas:80,76667933,
+STOP O:1 M:2, Czas:111,29542949,
+Proces 1
+START O:17 M:5, Czas:0,
+START O:2 M:7, Czas:4,924905342,
+STOP O:17 M:5, Czas:4,924905342,
+STOP O:2 M:7, Czas:16,594942942,
+START O:16 M:7, Czas:25,831116058,
+STOP O:16 M:7, Czas:113,310319338,
+START O:3 M:5, Czas:113,739755723,
+STOP O:3 M:5, Czas:147,925669773,
+Proces 2
+START O:15 M:3, Czas:0,
+START O:4 M:6, Czas:21,08019984,
+STOP O:15 M:3, Czas:21,08019984,
+START O:14 M:1, Czas:32,55726903,
+STOP O:4 M:6, Czas:32,55726903,
+STOP O:14 M:1, Czas:104,80300994,
+START O:5 M:1, Czas:106,69306734599999,
+STOP O:5 M:1, Czas:122,37643034599999,
+Proces 3
+START O:13 M:9, Czas:33,359600459999996,
+STOP O:13 M:9, Czas:79,9288799,
+START O:6 M:3, Czas:83,926663832,
+STOP O:6 M:3, Czas:122,973514652,
+START O:12 M:2, Czas:124,89946719900001,
+STOP O:12 M:2, Czas:133,057728652,
+START O:7 M:0, Czas:148,695695573,
+STOP O:7 M:0, Czas:156,545973025,
+Proces 4
+START O:11 M:0, Czas:0,
+STOP O:11 M:0, Czas:16,38885996,
+START O:8 M:0, Czas:21,737115438,
+STOP O:8 M:0, Czas:43,365574028,
+START O:10 M:0, Czas:52,871821857,
+STOP O:10 M:0, Czas:132,580572537,
+START O:9 M:0, Czas:132,63835287199998,
+STOP O:9 M:0, Czas:142,298111103,
