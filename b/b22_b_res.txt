@@ -1,0 +1,21 @@
+Wyniki rozwiązania testu o kryptonimie: b22
+Ilość zaburzeń procesów: 0
+Ilość przypadków zbyt wielu pauz: 0
+Czas przekaczający maksymalny czas pauz: 0
+Całkowity czas produkcji: 26
+Różnica czasu ukończenia procesów z wyzszym priorytetem i niższym (nieuwzględnienie priorytetów): 0
+Czas wykraczający poza maksymalną długość okna czasowego: 0
+Ilość nieotrzymanych materiałów: 0
+
+Struktura najlepszej kombinacji:
+Proces 0
+START O:4 M:3, Czas:0,
+START O:0 M:2, Czas:5,
+STOP O:4 M:3, Czas:5,
+STOP O:0 M:2, Czas:10,
+START O:1 M:4, Czas:10,
+START O:3 M:1, Czas:15,
+STOP O:1 M:4, Czas:15,
+STOP O:3 M:1, Czas:20,
+START O:2 M:3, Czas:21,
+STOP O:2 M:3, Czas:26,

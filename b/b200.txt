@@ -1,0 +1,104 @@
+Wyniki testu o kryptonimie: b200
+Maszyny:
+Maszyna id=0
+Czas trwania kolejnych operacji: 3 5 5 5 5
+Czas trwania dostosowania maszyny z jednej operacji na drugą:
+ 0 1 1 1 1
+ 1 0 1 1 1
+ 1 1 0 1 1
+ 1 1 1 0 1
+ 1 1 1 1 0
+Maszyna id=1
+Czas trwania kolejnych operacji: 5 3 5 5 5
+Czas trwania dostosowania maszyny z jednej operacji na drugą:
+ 0 1 1 1 1
+ 1 0 1 1 1
+ 1 1 0 1 1
+ 1 1 1 0 1
+ 1 1 1 1 0
+Maszyna id=2
+Czas trwania kolejnych operacji: 5 5 3 5 5
+Czas trwania dostosowania maszyny z jednej operacji na drugą:
+ 0 1 1 1 1
+ 1 0 1 1 1
+ 1 1 0 1 1
+ 1 1 1 0 1
+ 1 1 1 1 0
+Maszyna id=3
+Czas trwania kolejnych operacji: 5 5 5 3 5
+Czas trwania dostosowania maszyny z jednej operacji na drugą:
+ 0 1 1 1 1
+ 1 0 1 1 1
+ 1 1 0 1 1
+ 1 1 1 0 1
+ 1 1 1 1 0
+Maszyna id=4
+Czas trwania kolejnych operacji: 5 5 5 5 3
+Czas trwania dostosowania maszyny z jednej operacji na drugą:
+ 0 1 1 1 1
+ 1 0 1 1 1
+ 1 1 0 1 1
+ 1 1 1 0 1
+ 1 1 1 1 0
+
+Procesy:
+Proces o id= 0
+Priorytet: 1
+Operacje wchodzące w skład procesu:
+
+Operacja o id=4
+Czas po którym musi się rozpocząć po zakończeniu poprzedniej: 100
+Czas po którym musi się rozpocząć kolejna operacja: 100
+Czy można pauzować?: False
+Potrzebne materiały (ostatnia kolumna oznacza % postępu, w którym są potrzebne):
+ 0 0 0 0 0 6 0
+Produkowane materiały (ostatnia kolumna oznacza % postępu, w którym są produkowane):
+ 0 0 0 0 5 0 0
+
+Operacja o id=0
+Czas po którym musi się rozpocząć po zakończeniu poprzedniej: 100
+Czas po którym musi się rozpocząć kolejna operacja: 100
+Czy można pauzować?: False
+Potrzebne materiały (ostatnia kolumna oznacza % postępu, w którym są potrzebne):
+ 0 2 0 0 0 0 0
+Produkowane materiały (ostatnia kolumna oznacza % postępu, w którym są produkowane):
+ 1 0 0 0 0 0 0
+
+Operacja o id=1
+Czas po którym musi się rozpocząć po zakończeniu poprzedniej: 100
+Czas po którym musi się rozpocząć kolejna operacja: 100
+Czy można pauzować?: False
+Potrzebne materiały (ostatnia kolumna oznacza % postępu, w którym są potrzebne):
+ 0 0 3 0 0 0 0
+Produkowane materiały (ostatnia kolumna oznacza % postępu, w którym są produkowane):
+ 0 2 0 0 0 0 0
+
+Operacja o id=3
+Czas po którym musi się rozpocząć po zakończeniu poprzedniej: 100
+Czas po którym musi się rozpocząć kolejna operacja: 100
+Czy można pauzować?: False
+Potrzebne materiały (ostatnia kolumna oznacza % postępu, w którym są potrzebne):
+ 0 0 0 0 5 0 0
+Produkowane materiały (ostatnia kolumna oznacza % postępu, w którym są produkowane):
+ 0 0 0 4 0 0 0
+
+Operacja o id=2
+Czas po którym musi się rozpocząć po zakończeniu poprzedniej: 100
+Czas po którym musi się rozpocząć kolejna operacja: 100
+Czy można pauzować?: False
+Potrzebne materiały (ostatnia kolumna oznacza % postępu, w którym są potrzebne):
+ 0 0 0 4 0 0 0
+Produkowane materiały (ostatnia kolumna oznacza % postępu, w którym są produkowane):
+ 0 0 3 0 0 0 0
+
+Liczba produktów na początku procesu produkcyjnego: 100 100 100 100 100 100
+
+Ustawienia algorytmów:
+Algorytm genetyczny z początkowym algorytmem Johnsona
+Populacja początkowa: 1000
+Maksymalna populacja: 100
+Procent najlepszych osobników do reprodukcji: 1000
+Procent mutowanych osobników: 2
+Populacja początkowa: 1
+
+Wagi: a:1000,c:1,d:1,e:1,f:1,g:1,t:1

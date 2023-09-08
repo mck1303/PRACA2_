@@ -1,0 +1,21 @@
+Wyniki rozwiązania testu o kryptonimie: b15
+Ilość zaburzeń procesów: 0
+Ilość przypadków zbyt wielu pauz: 0
+Czas przekaczający maksymalny czas pauz: 0
+Całkowity czas produkcji: 27
+Różnica czasu ukończenia procesów z wyzszym priorytetem i niższym (nieuwzględnienie priorytetów): 0
+Czas wykraczający poza maksymalną długość okna czasowego: 0
+Ilość nieotrzymanych materiałów: 0
+
+Struktura najlepszej kombinacji:
+Proces 0
+START O:4 M:1, Czas:0,
+STOP O:4 M:1, Czas:5,
+START O:0 M:1, Czas:6,
+STOP O:0 M:1, Czas:11,
+START O:1 M:1, Czas:12,
+STOP O:1 M:1, Czas:15,
+START O:3 M:1, Czas:16,
+STOP O:3 M:1, Czas:21,
+START O:2 M:1, Czas:22,
+STOP O:2 M:1, Czas:27,

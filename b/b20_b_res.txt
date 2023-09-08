@@ -1,0 +1,21 @@
+Wyniki rozwiązania testu o kryptonimie: b20
+Ilość zaburzeń procesów: 0
+Ilość przypadków zbyt wielu pauz: 0
+Czas przekaczający maksymalny czas pauz: 0
+Całkowity czas produkcji: 24
+Różnica czasu ukończenia procesów z wyzszym priorytetem i niższym (nieuwzględnienie priorytetów): 0
+Czas wykraczający poza maksymalną długość okna czasowego: 0
+Ilość nieotrzymanych materiałów: 0
+
+Struktura najlepszej kombinacji:
+Proces 0
+START O:4 M:4, Czas:0,
+START O:0 M:2, Czas:3,
+STOP O:4 M:4, Czas:3,
+STOP O:0 M:2, Czas:8,
+START O:1 M:3, Czas:8,
+START O:3 M:0, Czas:13,
+STOP O:1 M:3, Czas:13,
+STOP O:3 M:0, Czas:18,
+START O:2 M:4, Czas:19,
+STOP O:2 M:4, Czas:24,
